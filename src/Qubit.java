@@ -1,23 +1,27 @@
 import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
-import java.util.concurrent.ThreadLocalRandom;
+import java.util.Random;
 
 class Qubit {
-    private static final int ALLOWABLE_QUBIT_ERROR = 1;
-    private static final int RANDOM_RANGE = 1;
+    private static final double ALLOWABLE_QUBIT_ERROR = .005;
+    //sometimes need more than double precision.
+    private final int RANDOM_RANGE; //
     private ComplexDoubleMatrix state;
 
     Qubit(ComplexDouble[] state) {
         assert state.length == 2 : "superposition of two states analogous to classical bits";
-        ComplexDoubleMatrix m = new ComplexDoubleMatrix(state);
+        this.state = new ComplexDoubleMatrix(state);
+        Random rand = new Random();
+        this.RANDOM_RANGE = rand.nextInt();
+
     }
 
-    public static int getAllowableQubitError() {
+    public static double getAllowableQubitError() {
         return ALLOWABLE_QUBIT_ERROR;
     }
 
-    public static int getRandomRange() {
+    public int getRandomRange() {
         return RANDOM_RANGE;
     }
 
@@ -25,42 +29,50 @@ class Qubit {
         return state;
     }
 
+    // checking that the sum of all complex factors is 1
     public boolean isValid() {
         ComplexDouble sum = new ComplexDouble(0);
         ComplexDouble witness = new ComplexDouble(1);
         for (ComplexDouble d : state.toArray()) {
-            sum.add(d.mul(d));
+            sum.add(d.mul(d).abs());
         }
-        return sum.eq(witness);
-        }
-
-
-    public int measure(int qubit) {
-        assert isValid();
-        double cursor = ThreadLocalRandom.current().nextDouble(0, RANDOM_RANGE + 1);
-        for (int i = 0; i < state.length; i++) {
-            cursor -= state.data[i];
-            if (cursor <= 0) {
-                getState().print();
-                collapse(i);
-                return (qubit >> (i - 1)) & 1;
-            }
-        }
-        try {
-            throw new InterruptedException("invalid measurement");
-        } catch (InterruptedException e) {
-            // error catching for invalid qubit measurements
-        }
-        return -1;
+        return sum.abs() > witness.abs() - ALLOWABLE_QUBIT_ERROR
+                && sum.abs() < witness.abs() + ALLOWABLE_QUBIT_ERROR;  // handle error
     }
 
 
-    private int collapse(int entry) {
-        for (int i = 0; i < state.length; i++) {
-            state.data[i] = 0;
+    // needs to yield 1 with prob alpha^2 or 0 with prob beta^2 for a SINGLE QUBIT
+    // probabilistically measure for work with more than two superposed state --
+    // hence the use of random.
+
+    public int measure() {
+        assert isValid() : "qubit must be in a valid state "; // add normalization function
+        Random rand = new Random();
+        double cursor;
+        do {
+            cursor = rand.nextDouble();
+        } while (cursor > RANDOM_RANGE);
+
+        for (int i = 0 ; i < state.toArray().length ; i++) {
+            cursor -= state.toArray()[i]
+                    .mul(state.toArray()[i])
+                    .mul(RANDOM_RANGE).abs() ;
+            if (cursor <= 0) {
+                collapse(i);
+                return  ;     // the bit you collapsed
+
+            }
         }
-        state.data[entry] = 1;
-        return entry;
+
+    }
+
+
+    private void collapse(int entry) {
+        for (int i = 0; i < state.toArray().length; i++) {
+            state.toArray()[i].set(0,0);
+        }
+        state.toArray()[entry].set(1,0);
+
     }
 
     public Qubit combine(Qubit q2) {
