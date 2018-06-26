@@ -1,6 +1,7 @@
 import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
+import java.util.InvalidPropertiesFormatException;
 import java.util.Random;
 
 class Qubit {
@@ -45,7 +46,7 @@ class Qubit {
     // probabilistically measure for work with more than two superposed state --
     // hence the use of random.
 
-    public int measure() {
+    public int measure(int position) {
         assert isValid() : "qubit must be in a valid state "; // add normalization function
         Random rand = new Random();
         double cursor;
@@ -53,39 +54,43 @@ class Qubit {
             cursor = rand.nextDouble();
         } while (cursor > RANDOM_RANGE);
 
-        for (int i = 0 ; i < state.toArray().length ; i++) {
+        for (int i = 0; i < state.toArray().length; i++) {
             cursor -= state.toArray()[i]
                     .mul(state.toArray()[i])
-                    .mul(RANDOM_RANGE).abs() ;
+                    .mul(RANDOM_RANGE).abs();
             if (cursor <= 0) {
                 collapse(i);
-                return  ;     // the bit you collapsed
+                return ((i >> (position - 1)) & 1);
 
             }
         }
-
+        try {
+            throw new InvalidPropertiesFormatException("Invalid measurement @ qubit " + position);
+        } catch (InvalidPropertiesFormatException e) {
+            // catching invalid measurements
+        }
+        return -1;
     }
 
 
     private void collapse(int entry) {
         for (int i = 0; i < state.toArray().length; i++) {
-            state.toArray()[i].set(0,0);
+            state.toArray()[i].set(0, 0);
         }
-        state.toArray()[entry].set(1,0);
+        state.toArray()[entry].set(1, 0);
 
     }
 
     public Qubit combine(Qubit q2) {
-        double[] tensorData
-                = new double[q2.state.length * this.state.length];
-        for (int i = 0; i < this.state.length; i++) {
-            for (int j = 0; j < q2.state.length; j++) {
-                tensorData[i * q2.state.length + j]
-                        = this.state.data[i] * q2.state.data[j];
+        ComplexDouble[] tensorData
+                = new ComplexDouble[q2.state.toArray().length * this.state.toArray().length];
+        for (int i = 0; i < this.state.toArray().length; i++) {
+            for (int j = 0; j < q2.state.toArray().length; j++) {
+                tensorData[i * q2.state.toArray().length + j]
+                        = this.state.toArray()[i].mul(q2.state.toArray()[j]);
             }
         }
-        ComplexDoubleMatrix newState = new ComplexDoubleMatrix(tensorData);
-        return new Qubit(newState);
+        return new Qubit(tensorData);
     }
 
 
