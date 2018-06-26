@@ -81,16 +81,16 @@ class Qubit {
 
     }
 
-    public Qubit combine(Qubit q2) {
+    public ComplexDouble[] combine(ComplexDouble[] q1, ComplexDouble[] q2) {
         ComplexDouble[] tensorData
-                = new ComplexDouble[q2.state.toArray().length * this.state.toArray().length];
-        for (int i = 0; i < this.state.toArray().length; i++) {
-            for (int j = 0; j < q2.state.toArray().length; j++) {
-                tensorData[i * q2.state.toArray().length + j]
-                        = this.state.toArray()[i].mul(q2.state.toArray()[j]);
+                = new ComplexDouble[q2.length * q1.length];
+        for (int i = 0; i < q1.length; i++) {
+            for (int j = 0; j < q2.length; j++) {
+                tensorData[i * q2.length + j]
+                        = q1[i].mul(q2[j]);
             }
         }
-        return new Qubit(tensorData);
+        return tensorData;
     }
 
 
