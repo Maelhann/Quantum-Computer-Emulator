@@ -1,53 +1,17 @@
 package gates.pauli;
 
-import gates.QuantumGate;
-import org.jblas.ComplexDouble;
-import org.jblas.ComplexDoubleMatrix;
+import gates.PhaseShift;
 
-public class ZGate extends QuantumGate {
+public class ZGate extends PhaseShift {
+
+// the ZGate is a phase shifter for theta = pi
+
     ZGate() {
-        ComplexDouble[] zData = new ComplexDouble[4];
-        zData[0].set(1, 0);
-        zData[1].set(0, 0);
-        zData[2].set(0, 0);
-        zData[3].set(-1, 0);
-        this.gate = new ComplexDoubleMatrix(zData);
-
-        ComplexDouble[] czData = new ComplexDouble[16];
-        for (int i = 0; i < 16; i++) {
-            if (i == 0 || i == 5) {
-                czData[i].set(1, 0);
-            } else {
-                czData[i].set(0, 0);
-            }
-        }
-        czData[10].set(1, 0);
-        czData[15].set(-1, 0);
-
-        this.cgate = new ComplexDoubleMatrix(czData);
+        super(Math.PI);
     }
 
     ZGate(int qubits) {
-        ComplexDouble[] zData = new ComplexDouble[4];
-        zData[0].set(1, 0);
-        zData[1].set(0, 0);
-        zData[2].set(0, 0);
-        zData[3].set(-1, 0);
-        this.gate = new ComplexDoubleMatrix(zData);
-
-        ComplexDouble[] czData = new ComplexDouble[16];
-        for (int i = 0; i < 16; i++) {
-            if (i == 0 || i == 5) {
-                czData[i].set(1, 0);
-            } else {
-                czData[i].set(0, 0);
-            }
-        }
-        czData[10].set(1, 0);
-        czData[15].set(-1, 0);
-
-        this.cgate = new ComplexDoubleMatrix(czData);
-        scaleGate(qubits,new ZGate());
+        super(qubits, Math.PI);
     }
 
 }

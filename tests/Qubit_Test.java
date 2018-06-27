@@ -10,7 +10,9 @@ public class Qubit_Test {
         doubles[2] = new ComplexDouble(1,1);
         doubles[3] = new ComplexDouble(0,1);
         ComplexDoubleMatrix state = new ComplexDoubleMatrix(doubles);
-        state.print();
+        ComplexDouble d = new ComplexDouble(Math.cos(Math.PI),Math.sin(Math.PI));
+        System.out.println(d);
+
 
           }
 
