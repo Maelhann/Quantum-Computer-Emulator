@@ -48,7 +48,7 @@ public class YGate extends QuantumGate {
 
         this.cgate = new ComplexDoubleMatrix(cyData);
 
-        scaleGate(qubits);
+        scaleGate(qubits,new YGate());
     }
 
 }

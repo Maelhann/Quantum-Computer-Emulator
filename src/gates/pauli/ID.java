@@ -50,7 +50,7 @@ public class ID extends QuantumGate{
         cIDData[15].set(1, 0);
         this.cgate = new ComplexDoubleMatrix(cIDData);
 
-        scaleGate(qubits);
+        scaleGate(qubits, new ID());
 
     }
 

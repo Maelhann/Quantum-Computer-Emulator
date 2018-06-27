@@ -22,7 +22,7 @@ public class Fredkin extends QuantumGate {
     }
 
     @Override
-    public void scaleGate(int qubits) {
+    public void scaleGate(int qubits, QuantumGate g) {
         // can't scale universal gate
     }
 

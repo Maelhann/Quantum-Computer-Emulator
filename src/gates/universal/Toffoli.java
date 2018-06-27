@@ -21,7 +21,7 @@ public class Toffoli extends QuantumGate {
 
 
     @Override
-    public void scaleGate(int qubits){
+    public void scaleGate(int qubits, QuantumGate g){
         // can't scale universal gate
     }
 }

@@ -53,7 +53,7 @@ public class XGate extends QuantumGate {
         cxData[14].set(1, 0);
         this.cgate = new ComplexDoubleMatrix(cxData);
 
-        scaleGate(qubits);
+        scaleGate(qubits, new XGate());
 
     }
 

@@ -47,7 +47,7 @@ public class ZGate extends QuantumGate {
         czData[15].set(-1, 0);
 
         this.cgate = new ComplexDoubleMatrix(czData);
-        scaleGate(qubits);
+        scaleGate(qubits,new ZGate());
     }
 
 }
