@@ -4,8 +4,8 @@ import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 public abstract class QuantumGate {
-    private ComplexDoubleMatrix gate;
-    private ComplexDoubleMatrix cgate;
+    protected ComplexDoubleMatrix gate;
+    protected ComplexDoubleMatrix cgate;
 
     protected QuantumGate() {
         ComplexDouble[] notData = new ComplexDouble[4];
