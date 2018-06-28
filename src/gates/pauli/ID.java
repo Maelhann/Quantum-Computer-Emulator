@@ -5,7 +5,7 @@ import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 public class ID extends QuantumGate{
-    ID() {
+    public ID() {
         ComplexDouble[] IDData = new ComplexDouble[4];
         IDData[0].set(1, 0);
         IDData[1].set(0, 0);
@@ -30,7 +30,7 @@ public class ID extends QuantumGate{
 
     // constructor for n-qubit inputs
 
-    ID(int qubits) {
+    public ID(int qubits) {
         ComplexDouble[] IDData = new ComplexDouble[4];
         IDData[0].set(1, 0);
         IDData[1].set(0, 0);

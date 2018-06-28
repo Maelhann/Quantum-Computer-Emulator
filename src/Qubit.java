@@ -1,17 +1,18 @@
+import gates.QuantumGate;
 import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 import java.util.InvalidPropertiesFormatException;
 import java.util.Random;
 
-class Qubit {
+public class Qubit {
     private static final double ALLOWABLE_QUBIT_ERROR = .005;
     //sometimes need more than double precision.
     private final int RANDOM_RANGE; //
     private ComplexDoubleMatrix state;
 
     Qubit(ComplexDouble[] state) {
-        assert state.length == 2 : "superposition of two states analogous to classical bits";
+        //assert state.length == 2 : "superposition of two states analogous to classical bits";
         this.state = new ComplexDoubleMatrix(state);
         Random rand = new Random();
         this.RANDOM_RANGE = rand.nextInt();
@@ -32,13 +33,14 @@ class Qubit {
 
     // checking that the sum of all complex factors is 1
     public boolean isValid() {
-        ComplexDouble sum = new ComplexDouble(0);
-        ComplexDouble witness = new ComplexDouble(1);
+        double sum = 0;
+
         for (ComplexDouble d : state.toArray()) {
-            sum.add(d.mul(d).abs());
+            sum += (d.mul(d).abs());
         }
-        return sum.abs() > witness.abs() - ALLOWABLE_QUBIT_ERROR
-                && sum.abs() < witness.abs() + ALLOWABLE_QUBIT_ERROR;  // handle error
+
+        return sum > 1 - ALLOWABLE_QUBIT_ERROR
+                && sum < 1 + ALLOWABLE_QUBIT_ERROR;  // handle error
     }
 
 
@@ -91,6 +93,25 @@ class Qubit {
             }
         }
         return new Qubit(tensorData);
+    }
+
+    public void applyGate(QuantumGate q) {
+        this.state = q.applyTo(getState());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        assert o instanceof Qubit;
+        if (((Qubit) o).getState().length != getState().length) {
+            return false;
+        } else {
+            for (int i = 0; i < getState().length; i++) {
+                if (!getState().toArray()[i].eq(((Qubit) o).getState().toArray()[i])) {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 
 

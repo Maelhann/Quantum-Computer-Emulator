@@ -6,11 +6,11 @@ public class ZGate extends PhaseShift {
 
 // the ZGate is a phase shifter for theta = pi
 
-    ZGate() {
+    public ZGate() {
         super(Math.PI);
     }
 
-    ZGate(int qubits) {
+    public ZGate(int qubits) {
         super(qubits, Math.PI);
     }
 

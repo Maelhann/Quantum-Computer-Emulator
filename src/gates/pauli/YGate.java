@@ -5,7 +5,7 @@ import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 public class YGate extends QuantumGate {
-    YGate() {
+    public YGate() {
         ComplexDouble[] yData = new ComplexDouble[4];
         yData[0].set(0, 0);
         yData[1].set(0, -1);
@@ -27,7 +27,7 @@ public class YGate extends QuantumGate {
         this.cgate = new ComplexDoubleMatrix(cyData);
     }
 
-    YGate(int qubits) {
+    public YGate(int qubits) {
         ComplexDouble[] yData = new ComplexDouble[4];
         yData[0].set(0, 0);
         yData[1].set(0, -1);

@@ -7,27 +7,9 @@ public abstract class QuantumGate {
     protected ComplexDoubleMatrix gate;
     protected ComplexDoubleMatrix cgate;
 
-    protected QuantumGate() {
-        ComplexDouble[] notData = new ComplexDouble[4];
-        notData[0].set(0, 0);
-        notData[1].set(0, 0);
-        notData[2].set(0, 0);
-        notData[3].set(0, 0);
-        this.gate = new ComplexDoubleMatrix(notData);
-
-        ComplexDouble[] cnotData = new ComplexDouble[16];
-        for (int i = 0; i < 16; i++) {
-            if (i == 0 || i == 5) {
-                cnotData[i].set(1, 0);
-            } else {
-                cnotData[i].set(0, 0);
-            }
-        }
-        this.cgate = new ComplexDoubleMatrix(cnotData);
-    }
 
     public ComplexDoubleMatrix applyTo(ComplexDoubleMatrix c) {
-        return gate.mul(c);
+        return gate.mmul(c);
     }
 
     public ComplexDoubleMatrix applyControlledTo(ComplexDoubleMatrix c) {
@@ -41,11 +23,15 @@ public abstract class QuantumGate {
         int i = 0;
         ComplexDoubleMatrix m = this.gate;
         ComplexDoubleMatrix cm = g.gate;
+        System.out.println(gate.rows);
+        System.out.println(gate.columns);
         while (i < qubits) {
             m = new ComplexDoubleMatrix(tensorProduct(m.toArray(), cm.toArray()));
             i++;
         }
         this.gate = this.cgate = m;
+        System.out.println(gate.rows);
+        System.out.println(gate.columns);
 
     }
 
