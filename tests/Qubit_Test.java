@@ -1,21 +1,19 @@
 import gates.pauli.XGate;
-import org.jblas.ComplexDouble;
+import org.jblas.ComplexDoubleMatrix;
 import org.junit.Test;
 
 
 public class Qubit_Test {
     @Test
-    public void test1() {
-        ComplexDouble[] bra0ket = new ComplexDouble[2];
+    public void XGate() {
+        ComplexDoubleMatrix bra0ket = new ComplexDoubleMatrix(2, 1);
 
-        bra0ket[0] = new ComplexDouble(1, 0);
-        bra0ket[1] = new ComplexDouble(0, 0);
+        bra0ket.put(0, 0, 1);
+        bra0ket.put(1, 0, 0);
+        ComplexDoubleMatrix bra1ket = new ComplexDoubleMatrix(2, 1);
 
-
-        ComplexDouble[] bra1ket = new ComplexDouble[2];
-
-        bra1ket[0] = new ComplexDouble(0, 0);
-        bra1ket[1] = new ComplexDouble(1, 0);
+        bra1ket.put(0, 0, 0);
+        bra1ket.put(1, 0, 1);
 
         Qubit q0 = new Qubit(bra0ket);
         Qubit q1 = new Qubit(bra1ket);
@@ -33,15 +31,19 @@ public class Qubit_Test {
         n.applyTo(q0.getState());
         assert q1.equals(q0);
 
-       // TODO : fix scalegate function in QuantumProgramming file
 
-        /* XGate n2 = new XGate(2);
+        XGate n2 = new XGate(2);
         Qubit q3 = q0.combine(q1);
+        assert q3.isValid();
+        Qubit q4 = new Qubit(q3.getState());
         q3.getState().print();
+        q3.applyGate(n2);
+        q3.getState().print();
+        assert q3.isValid();
 
-        n2.applyTo(q3.getState());
-        */
-
+        assert !q3.equals(q4);
+        q3.applyGate(n2);
+        assert q3.equals(q4);
 
 
     }

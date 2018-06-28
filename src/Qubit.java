@@ -11,9 +11,9 @@ public class Qubit {
     private final int RANDOM_RANGE; //
     private ComplexDoubleMatrix state;
 
-    Qubit(ComplexDouble[] state) {
+    Qubit(ComplexDoubleMatrix state) {
         //assert state.length == 2 : "superposition of two states analogous to classical bits";
-        this.state = new ComplexDoubleMatrix(state);
+        this.state = state;
         Random rand = new Random();
         this.RANDOM_RANGE = rand.nextInt();
 
@@ -83,9 +83,10 @@ public class Qubit {
 
     }
 
-    public Qubit combine(Qubit q2) {
+    /* public Qubit combine(Qubit q2) {
         ComplexDouble[] tensorData
                 = new ComplexDouble[q2.state.toArray().length * this.state.toArray().length];
+
         for (int i = 0; i < this.state.toArray().length; i++) {
             for (int j = 0; j < q2.state.toArray().length; j++) {
                 tensorData[i * q2.state.toArray().length + j]
@@ -93,6 +94,19 @@ public class Qubit {
             }
         }
         return new Qubit(tensorData);
+    }
+    */
+
+    public Qubit combine(Qubit q2){
+        ComplexDoubleMatrix tensorData
+                = new ComplexDoubleMatrix(this.getState().length , q2.state.getLength()) ;
+        for (int i = 0; i < this.state.length; i++) {
+            for (int j = 0; j < q2.state.length; j++) {
+                tensorData.put(i,j,getState().get(i).mul(q2.getState().get(j))) ;
+            }
+        }
+        return new Qubit(tensorData);
+
     }
 
     public void applyGate(QuantumGate q) {

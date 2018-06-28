@@ -1,6 +1,5 @@
 package gates;
 
-import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 public abstract class QuantumGate {
@@ -9,6 +8,9 @@ public abstract class QuantumGate {
 
 
     public ComplexDoubleMatrix applyTo(ComplexDoubleMatrix c) {
+        System.out.println("here comes the interesting bit");
+        System.out.println(c.rows);
+        System.out.println(c.columns);
         return gate.mmul(c);
     }
 
@@ -23,19 +25,15 @@ public abstract class QuantumGate {
         int i = 0;
         ComplexDoubleMatrix m = this.gate;
         ComplexDoubleMatrix cm = g.gate;
-        System.out.println(gate.rows);
-        System.out.println(gate.columns);
-        while (i < qubits) {
-            m = new ComplexDoubleMatrix(tensorProduct(m.toArray(), cm.toArray()));
+        while (i < qubits ) {
+            this.gate = tensorProduct(this.gate, g.gate);
             i++;
         }
         this.gate = this.cgate = m;
-        System.out.println(gate.rows);
-        System.out.println(gate.columns);
+        }
 
-    }
 
-    private ComplexDouble[] tensorProduct(ComplexDouble[] q1, ComplexDouble[] q2) {
+    /*private ComplexDouble[] tensorProduct(ComplexDouble[] q1, ComplexDouble[] q2) {
         ComplexDouble[] tensorData
                 = new ComplexDouble[q2.length * q1.length];
         for (int i = 0; i < q1.length; i++) {
@@ -45,6 +43,18 @@ public abstract class QuantumGate {
             }
         }
         return tensorData;
+    }
+    */
+
+
+    private ComplexDoubleMatrix tensorProduct(ComplexDoubleMatrix q1, ComplexDoubleMatrix q2) {
+        ComplexDoubleMatrix c = new ComplexDoubleMatrix(q1.length, q2.length);
+        for (int i = 0; i < q1.length; i++) {
+            for (int j = 0; j < q2.length; j++) {
+                c.put(i, j, q1.toArray()[i].mul(q2.toArray()[j]));
+            }
+        }
+        return c;
     }
 
 
