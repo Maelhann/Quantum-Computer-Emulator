@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="906fbff8-d91c-4fc3-a734-5a96b86e9052" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Quantum-Emulator.iml" afterPath="$PROJECT_DIR$/Quantum-Emulator.iml" />
-      <change beforePath="$PROJECT_DIR$/src/Qubit.java" afterPath="$PROJECT_DIR$/src/Qubit.java" />
-      <change beforePath="$PROJECT_DIR$/src/gates/QuantumGate.java" afterPath="$PROJECT_DIR$/src/gates/QuantumGate.java" />
-      <change beforePath="$PROJECT_DIR$/src/gates/pauli/ID.java" afterPath="$PROJECT_DIR$/src/gates/pauli/ID.java" />
       <change beforePath="$PROJECT_DIR$/src/gates/pauli/XGate.java" afterPath="$PROJECT_DIR$/src/gates/pauli/XGate.java" />
-      <change beforePath="$PROJECT_DIR$/src/gates/pauli/YGate.java" afterPath="$PROJECT_DIR$/src/gates/pauli/YGate.java" />
-      <change beforePath="$PROJECT_DIR$/src/gates/pauli/ZGate.java" afterPath="$PROJECT_DIR$/src/gates/pauli/ZGate.java" />
       <change beforePath="$PROJECT_DIR$/tests/Qubit_Test.java" afterPath="$PROJECT_DIR$/tests/Qubit_Test.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XGate.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="XGate.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gates/pauli/XGate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="66" column="35" lean-forward="false" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+            <state relative-caret-position="530">
+              <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Qubit_Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Qubit_Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Qubit_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+            <state relative-caret-position="270">
+              <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,18 +204,18 @@
         <option value="$PROJECT_DIR$/src/gates/pauli/ID.java" />
         <option value="$PROJECT_DIR$/src/gates/pauli/YGate.java" />
         <option value="$PROJECT_DIR$/src/gates/pauli/ZGate.java" />
-        <option value="$PROJECT_DIR$/src/gates/pauli/XGate.java" />
         <option value="$PROJECT_DIR$/src/Qubit.java" />
         <option value="$PROJECT_DIR$/src/gates/QuantumGate.java" />
         <option value="$PROJECT_DIR$/tests/Qubit_Test.java" />
+        <option value="$PROJECT_DIR$/src/gates/pauli/XGate.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="271" />
-    <option name="y" value="27" />
+    <option name="x" value="326" />
+    <option name="y" value="53" />
     <option name="width" value="1455" />
-    <option name="height" value="1037" />
+    <option name="height" value="1046" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -440,9 +434,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Qubit_Test - 2018.06.27 at 18h 51m 41s.xml">
-      <configuration name="Qubit_Test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Qubit_Test - 2018.06.27 at 18h 53m 38s.xml">
       <configuration name="Qubit_Test" configurationId="JUnit" />
     </history-entry>
@@ -470,9 +461,12 @@
     <history-entry file="Qubit_Test - 2018.06.27 at 19h 02m 18s.xml">
       <configuration name="Qubit_Test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Qubit_Test - 2018.06.27 at 19h 05m 12s.xml">
+      <configuration name="Qubit_Test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="271" y="27" width="1455" height="1037" extended-state="0" />
+    <frame x="326" y="53" width="1455" height="1046" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -483,7 +477,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3257821" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1049,16 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gates/pauli/XGate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="66" column="35" lean-forward="false" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Qubit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-90">
@@ -1091,8 +1075,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Qubit_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        <state relative-caret-position="270">
+          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/pauli/XGate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

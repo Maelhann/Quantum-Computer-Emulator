@@ -9,61 +9,36 @@ public class XGate extends QuantumGate {
 
 
     public XGate() {
-        ComplexDoubleMatrix newGate = new ComplexDoubleMatrix(2, 2);
-
-        /* newGate.toArray2()[0][0] = new ComplexDouble( 0);
-        newGate.toArray2()[0][1] = new ComplexDouble(1);
-        newGate.toArray2()[1][0] = new ComplexDouble(1);
-        newGate.toArray2()[1][1] = new ComplexDouble(0);
-        */
-
-        newGate.put(0, 1, 1);
-        newGate.put(1, 0, 1);
-        this.gate = newGate;
-
-
-        ComplexDouble[] cxData = new ComplexDouble[16];
-        for (int i = 0; i < 16; i++) {
-            if (i == 0 || i == 5) {
-                cxData[i] = new ComplexDouble(1, 0);
-            } else {
-                cxData[i] = new ComplexDouble(0, 0);
-            }
-        }
-        cxData[11].set(1, 0);
-        cxData[14].set(1, 0);
-
-        this.cgate = new ComplexDoubleMatrix(cxData);
+        ComplexDoubleMatrix xGate = new ComplexDoubleMatrix(2, 2);
+        xGate.put(0, 1, 1);
+        xGate.put(1, 0, 1);
+        this.gate = xGate;
+        ComplexDoubleMatrix cxGate = new ComplexDoubleMatrix(4, 4);
+        cxGate.put(0, 0, 1);
+        cxGate.put(1, 1, 1);
+        cxGate.put(2, 3, 1);
+        cxGate.put(3, 2, 1);
+        this.cgate = cxGate;
     }
 
 
     // constructor for n-qubit inputs
-    public XGate(int qubits) {
-        ComplexDoubleMatrix newGate = new ComplexDoubleMatrix(2, 2);
 
-        /* newGate.toArray2()[0][0] = new ComplexDouble( 0);
-        newGate.toArray2()[0][1] = new ComplexDouble(1);
-        newGate.toArray2()[1][0] = new ComplexDouble(1);
-        newGate.toArray2()[1][1] = new ComplexDouble(0);
-        */
+    public XGate(int inputs) {
+        ComplexDoubleMatrix xGate = new ComplexDoubleMatrix(2, 2);
+        xGate.put(0, 1, 1);
+        xGate.put(1, 0, 1);
 
-        newGate.put(0, 1, 1);
-        newGate.put(1, 0, 1);
-        this.gate = newGate;
+        this.gate = xGate;
 
+        ComplexDoubleMatrix cxGate = new ComplexDoubleMatrix(4, 4);
+        cxGate.put(0, 0, 1);
+        cxGate.put(1, 1, 1);
+        cxGate.put(2, 3, 1);
+        cxGate.put(3, 2, 1);
 
-        ComplexDouble[] cxData = new ComplexDouble[16];
-        for (int i = 0; i < 16; i++) {
-            if (i == 0 || i == 5) {
-                cxData[i] = new ComplexDouble(1, 0);
-            } else {
-                cxData[i] = new ComplexDouble(0, 0);
-            }
-        }
-        cxData[11].set(1, 0);
-        cxData[14].set(1, 0);
+        this.cgate = cxGate;
 
-        this.cgate = new ComplexDoubleMatrix(cxData);
-        scaleGate(qubits,new XGate());
+        scaleGate(inputs,new XGate());
     }
 }

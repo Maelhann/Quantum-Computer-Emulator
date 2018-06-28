@@ -33,7 +33,7 @@ public class Qubit_Test {
         n.applyTo(q0.getState());
         assert q1.equals(q0);
 
-        
+       // TODO : fix scalegate function in QuantumProgramming file
 
         /* XGate n2 = new XGate(2);
         Qubit q3 = q0.combine(q1);
