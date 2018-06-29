@@ -1,29 +1,24 @@
 package gates.universal;
 
 import gates.QuantumGate;
-import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 public class Fredkin extends QuantumGate {
     Fredkin() {
-        ComplexDouble[] fredkinData = new ComplexDouble[64];
-
-        for (int i = 0; i < 64; i++) {
-            if (i % 9 == 0 && i < 37) {
-                fredkinData[i].set(1, 0);
-            } else {
-                fredkinData[i].set(0, 0);
-            }
+        ComplexDoubleMatrix fredkinGate
+                = new ComplexDoubleMatrix(8, 8);
+        for (int i = 0; i < 5; i++) {
+            fredkinGate.put(i, i, 1);
         }
-        fredkinData[46].set(1, 0);
-        fredkinData[53].set(1, 0);
-        fredkinData[63].set(1, 0);
-        this.gate = this.cgate = new ComplexDoubleMatrix(fredkinData);
+        fredkinGate.put(7, 7, 1);
+        fredkinGate.put(5, 6, 1);
+        fredkinGate.put(6, 5, 1);
+        this.gate = this.cgate = fredkinGate;
     }
 
     @Override
     public void scaleGate(int qubits, QuantumGate g) {
-        // can't scale universal gate
+        System.out.println("attempt to scale a universal gate (Fredkin) for input size :" + qubits + " qubits ");
     }
 
 }

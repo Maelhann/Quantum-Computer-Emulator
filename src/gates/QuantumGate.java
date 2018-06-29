@@ -8,16 +8,13 @@ public abstract class QuantumGate {
 
 
     public ComplexDoubleMatrix applyTo(ComplexDoubleMatrix c) {
-        System.out.println("here comes the interesting bit");
-        System.out.println(c.rows);
-        System.out.println(c.columns);
+        assert gate.columns == c.rows;
         return gate.mmul(c);
     }
 
     public ComplexDoubleMatrix applyControlledTo(ComplexDoubleMatrix c) {
-        // controlled version of the applyTo method --
-        // control bits to be specified in input !!
-        return cgate.mul(c);
+        assert gate.columns == c.rows;
+        return cgate.mmul(c);
     }
 
     protected void scaleGate(int qubits, QuantumGate g) {
@@ -25,28 +22,15 @@ public abstract class QuantumGate {
         int i = 0;
         ComplexDoubleMatrix m = this.gate;
         ComplexDoubleMatrix cm = g.gate;
-        while (i < qubits ) {
+        while (i < qubits) {
             this.gate = tensorProduct(this.gate, g.gate);
             i++;
         }
         this.gate = this.cgate = m;
-        }
-
-
-    /*private ComplexDouble[] tensorProduct(ComplexDouble[] q1, ComplexDouble[] q2) {
-        ComplexDouble[] tensorData
-                = new ComplexDouble[q2.length * q1.length];
-        for (int i = 0; i < q1.length; i++) {
-            for (int j = 0; j < q2.length; j++) {
-                tensorData[i * q2.length + j]
-                        = q1[i].mul(q2[j]);
-            }
-        }
-        return tensorData;
     }
-    */
 
 
+    // IMPLEMENTATION OF THE KRONECKER TENSOR-PRODUCT FOR JBLAS
     private ComplexDoubleMatrix tensorProduct(ComplexDoubleMatrix q1, ComplexDoubleMatrix q2) {
         ComplexDoubleMatrix c = new ComplexDoubleMatrix(q1.length, q2.length);
         for (int i = 0; i < q1.length; i++) {

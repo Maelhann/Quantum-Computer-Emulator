@@ -1,56 +1,38 @@
 package gates.pauli;
 
 import gates.QuantumGate;
-import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
-public class ID extends QuantumGate{
+public class ID extends QuantumGate {
     public ID() {
-        ComplexDouble[] IDData = new ComplexDouble[4];
-        IDData[0].set(1, 0);
-        IDData[1].set(0, 0);
-        IDData[2].set(0, 0);
-        IDData[3].set(1, 0);
-        this.gate = new ComplexDoubleMatrix(IDData);
-
-        ComplexDouble[] cIDData = new ComplexDouble[16];
-        for (int i = 0; i < 16; i++) {
-            if (i == 0 || i == 5) {
-                cIDData[i].set(1, 0);
-            } else {
-                cIDData[i].set(0, 0);
-            }
-        }
-        cIDData[10].set(1, 0);
-        cIDData[15].set(1, 0);
-
-        this.cgate = new ComplexDoubleMatrix(cIDData);
+        ComplexDoubleMatrix idGate = new ComplexDoubleMatrix(2, 2);
+        idGate.put(0, 0, 1);
+        idGate.put(1, 1, 1);
+        this.gate = idGate;
+        ComplexDoubleMatrix cidGate = new ComplexDoubleMatrix(4, 4);
+        cidGate.put(0, 0, 1);
+        cidGate.put(1, 1, 1);
+        cidGate.put(2, 2, 1);
+        cidGate.put(3, 3, 1);
+        this.cgate = cidGate;
+        // there really is no need for a controlled version of ID, 
+        // as cidGate basically is ID of dim 4 
     }
 
 
     // constructor for n-qubit inputs
 
     public ID(int qubits) {
-        ComplexDouble[] IDData = new ComplexDouble[4];
-        IDData[0].set(1, 0);
-        IDData[1].set(0, 0);
-        IDData[2].set(0, 0);
-        IDData[3].set(1, 0);
-        this.gate = new ComplexDoubleMatrix(IDData);
-
-        ComplexDouble[] cIDData = new ComplexDouble[16];
-        for (int i = 0; i < 16; i++) {
-            if (i == 0 || i == 5) {
-                cIDData[i].set(1, 0);
-            } else {
-                cIDData[i].set(0, 0);
-            }
-        }
-        cIDData[10].set(1, 0);
-        cIDData[15].set(1, 0);
-        this.cgate = new ComplexDoubleMatrix(cIDData);
-
-        scaleGate(qubits, new ID());
+        ComplexDoubleMatrix idGate = new ComplexDoubleMatrix(2, 2);
+        idGate.put(0, 0, 1);
+        idGate.put(1, 1, 1);
+        this.gate = idGate;
+        ComplexDoubleMatrix cidGate = new ComplexDoubleMatrix(4, 4);
+        cidGate.put(0, 0, 1);
+        cidGate.put(1, 1, 1);
+        cidGate.put(2, 2, 1);
+        cidGate.put(3, 3, 1);
+        this.cgate = cidGate;
 
     }
 

@@ -4,7 +4,7 @@ import gates.PhaseShift;
 
 public class ZGate extends PhaseShift {
 
-// the ZGate is a phase shifter for theta = pi
+// NOTE : the ZGate is a phaseshift gate where for theta = pi..
 
     public ZGate() {
         super(Math.PI);

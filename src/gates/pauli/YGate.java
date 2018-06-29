@@ -1,54 +1,36 @@
 package gates.pauli;
 
 import gates.QuantumGate;
-import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 public class YGate extends QuantumGate {
     public YGate() {
-        ComplexDouble[] yData = new ComplexDouble[4];
-        yData[0].set(0, 0);
-        yData[1].set(0, -1);
-        yData[2].set(0, 1);
-        yData[3].set(0, 0);
-        this.gate = new ComplexDoubleMatrix(yData);
-
-        ComplexDouble[] cyData = new ComplexDouble[16];
-        for (int i = 0; i < 16; i++) {
-            if (i == 0 || i == 5) {
-                cyData[i].set(1, 0);
-            } else {
-                cyData[i].set(0, 0);
-            }
-        }
-        cyData[11].set(0, -1);
-        cyData[14].set(0, 1);
-
-        this.cgate = new ComplexDoubleMatrix(cyData);
+        ComplexDoubleMatrix yGate = new ComplexDoubleMatrix(2, 2);
+        yGate.put(0, 1, -1);
+        yGate.put(1, 0, 1);
+        this.gate = yGate;
+        ComplexDoubleMatrix cyGate = new ComplexDoubleMatrix(4, 4);
+        cyGate.put(0, 0, 1);
+        cyGate.put(1, 1, 1);
+        cyGate.put(2, 3, -1);
+        cyGate.put(3, 2, 1);
+        this.cgate = cyGate;
     }
 
     public YGate(int qubits) {
-        ComplexDouble[] yData = new ComplexDouble[4];
-        yData[0].set(0, 0);
-        yData[1].set(0, -1);
-        yData[2].set(0, 1);
-        yData[3].set(0, 0);
-        this.gate = new ComplexDoubleMatrix(yData);
+        ComplexDoubleMatrix yGate = new ComplexDoubleMatrix(2, 2);
+        yGate.put(0, 1, -1);
+        yGate.put(1, 0, 1);
+        this.gate = yGate;
+        ComplexDoubleMatrix cyGate = new ComplexDoubleMatrix(4, 4);
+        cyGate.put(0, 0, 1);
+        cyGate.put(1, 1, 1);
+        cyGate.put(2, 3, -1);
+        cyGate.put(3, 2, 1);
+        this.cgate = cyGate;
 
-        ComplexDouble[] cyData = new ComplexDouble[16];
-        for (int i = 0; i < 16; i++) {
-            if (i == 0 || i == 5) {
-                cyData[i].set(1, 0);
-            } else {
-                cyData[i].set(0, 0);
-            }
-        }
-        cyData[11].set(0, -1);
-        cyData[14].set(0, 1);
+        scaleGate(qubits, new YGate());
 
-        this.cgate = new ComplexDoubleMatrix(cyData);
-
-        scaleGate(qubits,new YGate());
     }
 
 }

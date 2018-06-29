@@ -5,23 +5,22 @@ import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 public class Toffoli extends QuantumGate {
-    Toffoli() {
-        ComplexDouble[] toffoliData = new ComplexDouble[64];
-        for (int i = 0; i < 64; i++) {
-            if (i % 9 == 0 && i < 46) {
-                toffoliData[i].set(1, 0);
-            } else {
-                toffoliData[i].set(0, 0);
-            }
+    Toffoli(){
+
+        ComplexDoubleMatrix toffoliGate
+                = new ComplexDoubleMatrix(8, 8);
+        for (int i = 0; i < 6; i++) {
+            toffoliGate.put(i, i, 1);
         }
-        toffoliData[55].set(1, 0);
-        toffoliData[62].set(1, 0);
-        this.gate = this.cgate = new ComplexDoubleMatrix(toffoliData);
-    }
+        toffoliGate.put(6, 7, 1);
+        toffoliGate.put(7, 6, 1);
+        this.gate = this.cgate = toffoliGate;
+
+        }
 
 
     @Override
     public void scaleGate(int qubits, QuantumGate g){
-        // can't scale universal gate
+        System.out.println("attempt to scale a universal gate (Toffoli) for input size :" + qubits + " qubits ");
     }
 }

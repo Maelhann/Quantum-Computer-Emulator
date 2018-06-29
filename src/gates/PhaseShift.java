@@ -4,51 +4,36 @@ import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 public class PhaseShift extends QuantumGate {
-     protected PhaseShift(double theta) {
-        ComplexDouble[] phaseShift = new ComplexDouble[4];
-        ComplexDouble d = new ComplexDouble(Math.cos(theta), Math.sin(theta));
-        phaseShift[0].set(1, 0);
-        phaseShift[1].set(0, 0);
-        phaseShift[2].set(0, 0);
-        phaseShift[3].set(d.real(), 0);
-        this.gate = new ComplexDoubleMatrix(phaseShift);
+    protected PhaseShift(double theta) {
 
-        ComplexDouble[] cphaseShift = new ComplexDouble[16];
-        for (int i = 0; i < 16; i++) {
-            if (i == 0 || i == 5) {
-                cphaseShift[i].set(1, 0);
-            } else {
-                cphaseShift[i].set(0, 0);
-            }
-        }
-        cphaseShift[10].set(1, 0);
-        cphaseShift[15].set(d.real(), 0);
+        ComplexDoubleMatrix psGate = new ComplexDoubleMatrix(2, 2);
+        psGate.put(0, 0, 1);
+        psGate.put(1, 1, new ComplexDouble(Math.cos(theta), Math.sin(theta)));
+        this.gate = psGate;
+        ComplexDoubleMatrix cpsGate = new ComplexDoubleMatrix(4, 4);
+        cpsGate.put(0, 0, 1);
+        cpsGate.put(1, 1, 1);
+        cpsGate.put(2, 2, 1);
+        cpsGate.put(3, 3, new ComplexDouble(Math.cos(theta), Math.sin(theta)));
+        this.cgate = cpsGate;
 
-        this.cgate = new ComplexDoubleMatrix(cphaseShift);
+
     }
 
     protected PhaseShift(int qubits, double theta) {
-        ComplexDouble[] phaseShift = new ComplexDouble[4];
-        ComplexDouble d = new ComplexDouble(Math.cos(theta), Math.sin(theta));
-        phaseShift[0].set(1, 0);
-        phaseShift[1].set(0, 0);
-        phaseShift[2].set(0, 0);
-        phaseShift[3].set(d.real(), 0);
-        this.gate = new ComplexDoubleMatrix(phaseShift);
+        ComplexDoubleMatrix psGate = new ComplexDoubleMatrix(2, 2);
+        psGate.put(0, 0, 1);
+        psGate.put(1, 1, new ComplexDouble(Math.cos(theta), Math.sin(theta)));
+        this.gate = psGate;
+        ComplexDoubleMatrix cpsGate = new ComplexDoubleMatrix(4, 4);
+        cpsGate.put(0, 0, 1);
+        cpsGate.put(1, 1, 1);
+        cpsGate.put(2, 2, 1);
+        cpsGate.put(3, 3, new ComplexDouble(Math.cos(theta), Math.sin(theta)));
+        this.cgate = cpsGate;
 
-        ComplexDouble[] cphaseShift = new ComplexDouble[16];
-        for (int i = 0; i < 16; i++) {
-            if (i == 0 || i == 5) {
-                cphaseShift[i].set(1, 0);
-            } else {
-                cphaseShift[i].set(0, 0);
-            }
-        }
-        cphaseShift[10].set(1, 0);
-        cphaseShift[15].set(d.real(), 0);
+        scaleGate(qubits, new PhaseShift(theta));
 
-        this.cgate = new ComplexDoubleMatrix(cphaseShift);
-        scaleGate(qubits, new PhaseShift(theta)); // tantamount to "qubit" rotations ? (for d)
     }
 
 
