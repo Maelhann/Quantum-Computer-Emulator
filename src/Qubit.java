@@ -97,12 +97,12 @@ public class Qubit {
     }
     */
 
-    public Qubit combine(Qubit q2){
+    public Qubit combine(Qubit q2) {
         ComplexDoubleMatrix tensorData
-                = new ComplexDoubleMatrix(this.getState().length , q2.state.getLength()) ;
+                = new ComplexDoubleMatrix(this.getState().length, q2.state.getLength());
         for (int i = 0; i < this.state.length; i++) {
             for (int j = 0; j < q2.state.length; j++) {
-                tensorData.put(i,j,getState().get(i).mul(q2.getState().get(j))) ;
+                tensorData.put(i, j, getState().get(i).mul(q2.getState().get(j)));
             }
         }
         return new Qubit(tensorData);
@@ -121,9 +121,11 @@ public class Qubit {
         } else {
             for (int i = 0; i < getState().length; i++) {
                 if (!getState().toArray()[i].eq(((Qubit) o).getState().toArray()[i])) {
+
                     return false;
                 }
             }
+
             return true;
         }
     }

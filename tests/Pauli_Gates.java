@@ -1,4 +1,7 @@
 import gates.pauli.XGate;
+import gates.pauli.YGate;
+import gates.pauli.ZGate;
+import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 import org.junit.Test;
 
@@ -56,17 +59,79 @@ public class Pauli_Gates {
         q3.getState().print();
 
         assert q3.isValid();
-
         assert !q3.equals(q4);
 
         q3.applyGate(n2);
-
         assert q3.equals(q4);
 
 
     }
 
+    @Test
+    public void YGate() {
+        ComplexDoubleMatrix bra0ket
+                = new ComplexDoubleMatrix(2, 1);
+
+        bra0ket.put(0, 0, 1);
+        bra0ket.put(1, 0, 0);
+        ComplexDoubleMatrix bra1ket
+                = new ComplexDoubleMatrix(2, 1);
+
+        bra1ket.put(0, 0, 0);
+        bra1ket.put(1, 0, 1);
+
+        Qubit q0 = new Qubit(bra0ket);
+        Qubit q1 = new Qubit(bra1ket);
+
+        YGate z = new YGate();
+        // the ZGate maps |0>  to i|1> and maps |1> to -i|0>
+
+        Qubit q0Prime = new Qubit(q1.getState().mul(new ComplexDouble(0,1)));
+        Qubit q0Second = new Qubit(q0.getState());
+
+        q0Second.getState().print();
+        q0Second.applyGate(z);
+        q0Second.getState().print();
+        assert q0Prime.equals(q0Second);
+
+        Qubit q1Prime = new Qubit(q0.getState().mul(new ComplexDouble(0,-1)));
+        Qubit q1Second = new Qubit(q1.getState());
+        q1Second.getState().print();
+        q1Second.applyGate(z);
+        q1Second.getState().print();
+        assert q1Prime.equals(q1Second);
+
+    }
+
+    @Test
     public void ZGate() {
+        ComplexDoubleMatrix bra0ket
+                = new ComplexDoubleMatrix(2, 1);
+
+        bra0ket.put(0, 0, 1);
+        bra0ket.put(1, 0, 0);
+        ComplexDoubleMatrix bra1ket
+                = new ComplexDoubleMatrix(2, 1);
+
+        bra1ket.put(0, 0, 0);
+        bra1ket.put(1, 0, 1);
+
+        Qubit q0 = new Qubit(bra0ket);
+        Qubit q1 = new Qubit(bra1ket);
+
+
+        ZGate z = new ZGate();
+        // the ZGate leaves |0> unchanged and maps |1> to -|1>
+
+        Qubit q0Prime = new Qubit(q0.getState());
+        q0.applyGate(z);
+        assert q0Prime.equals(q0);
+
+        Qubit q1Prime = new Qubit(q1.getState().mul(-1));
+        q1.applyGate(z);
+        assert q1Prime.equals(q1);
+
+
 
     }
 
