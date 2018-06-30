@@ -6,6 +6,13 @@ public abstract class QuantumGate {
     protected ComplexDoubleMatrix gate;
     protected ComplexDoubleMatrix cgate;
 
+    public ComplexDoubleMatrix getGate() {
+        return gate;
+    }
+
+    public ComplexDoubleMatrix getCgate() {
+        return cgate;
+    }
 
     public ComplexDoubleMatrix applyTo(ComplexDoubleMatrix c) {
         assert gate.columns == c.rows;

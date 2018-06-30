@@ -11,7 +11,7 @@ public class Qubit {
     private final int RANDOM_RANGE; //
     private ComplexDoubleMatrix state;
 
-    Qubit(ComplexDoubleMatrix state) {
+    public Qubit(ComplexDoubleMatrix state) {
         //assert state.length == 2 : "superposition of two states analogous to classical bits";
         this.state = state;
         Random rand = new Random();
