@@ -43,20 +43,30 @@ public class Pauli_Gates {
 
         assert q1.equals(q0);
 
+
+        q1.getState().print();
+        q0.applyGate(n);
+        q0.getState().print();
+        // restored qubits to their original states
+
         // testing our scaled up version of the gate for 2 - qubit inputs
         // testing the scaled gate on the combined qubit of our basis states.
         XGate n2 = new XGate(2);
-        Qubit q3 = q0.combine(q1);
-
+        Qubit q3 = q0.entangle(q1);
         assert q3.isValid();
-
         // making a copy of the original combined qubit to get reference results.
         // printing the states to make sure the gate has indeed been applied
         Qubit q4 = new Qubit(q3.getState());
 
         q3.getState().print();
+        n2.getGate().print();
+
+        Qubit qtest = new Qubit((n2.getGate()).mmul(q3.getState()));
+        qtest.getState().print();
+
         q3.applyGate(n2);
         q3.getState().print();
+
 
         assert q3.isValid();
         assert !q3.equals(q4);
@@ -86,7 +96,7 @@ public class Pauli_Gates {
         YGate z = new YGate();
         // the ZGate maps |0>  to i|1> and maps |1> to -i|0>
 
-        Qubit q0Prime = new Qubit(q1.getState().mul(new ComplexDouble(0,1)));
+        Qubit q0Prime = new Qubit(q1.getState().mul(new ComplexDouble(0, 1)));
         Qubit q0Second = new Qubit(q0.getState());
 
         q0Second.getState().print();
@@ -94,7 +104,7 @@ public class Pauli_Gates {
         q0Second.getState().print();
         assert q0Prime.equals(q0Second);
 
-        Qubit q1Prime = new Qubit(q0.getState().mul(new ComplexDouble(0,-1)));
+        Qubit q1Prime = new Qubit(q0.getState().mul(new ComplexDouble(0, -1)));
         Qubit q1Second = new Qubit(q1.getState());
         q1Second.getState().print();
         q1Second.applyGate(z);
@@ -130,7 +140,6 @@ public class Pauli_Gates {
         Qubit q1Prime = new Qubit(q1.getState().mul(-1));
         q1.applyGate(z);
         assert q1Prime.equals(q1);
-
 
 
     }

@@ -83,7 +83,7 @@ public class Qubit {
 
     }
 
-    /* public Qubit combine(Qubit q2) {
+    /* public Qubit entangle(Qubit q2) {
         ComplexDouble[] tensorData
                 = new ComplexDouble[q2.state.toArray().length * this.state.toArray().length];
 
@@ -97,16 +97,48 @@ public class Qubit {
     }
     */
 
-    public Qubit combine(Qubit q2) {
+    public Qubit entangle(Qubit q2) {
         ComplexDoubleMatrix tensorData
-                = new ComplexDoubleMatrix(this.getState().length, q2.state.getLength());
-        for (int i = 0; i < this.state.length; i++) {
-            for (int j = 0; j < q2.state.length; j++) {
-                tensorData.put(i, j, getState().get(i).mul(q2.getState().get(j)));
+                = new ComplexDoubleMatrix(this.getState().rows * q2.getState().rows
+                , q2.state.columns * this.getState().columns);
+
+        if (tensorData.columns == 1) {
+
+            for (int i = 0; i < this.getState().rows; i++) {
+                for (int k = 0; k < q2.getState().rows; k++) {
+                    for (int j = 0; j < this.getState().columns; j++) {
+                        for (int l = 0; l < q2.getState().columns; l++) {
+                            tensorData.put(i + l
+                                    , 0
+                                    , getState().get(i, j)
+                                            .mul(q2.getState().get(k, l)));
+
+
+                        }
+                    }
+                }
+
             }
+        } else {
+            // for combining a pre-entangled qubit with another one
+            for (int i = 0; i < this.getState().rows; i++) {
+                for (int k = 0; k < q2.getState().rows; k++) {
+                    for (int j = 0; j < this.getState().columns; j++) {
+                        for (int l = 0; l < q2.getState().columns; l++) {
+                            tensorData.put(i + l
+                                    , j + k
+                                    , getState().get(i, j)
+                                            .mul(q2.getState().get(k, l)));
+
+
+                        }
+                    }
+                }
+
+            }
+
         }
         return new Qubit(tensorData);
-
     }
 
     public void applyGate(QuantumGate q) {

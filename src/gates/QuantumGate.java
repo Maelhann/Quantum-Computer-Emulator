@@ -24,13 +24,13 @@ public abstract class QuantumGate {
         return cgate.mmul(c);
     }
 
-    protected void scaleGate(int qubits, QuantumGate g) {
+    public void scaleGate(int qubits, QuantumGate g) {
         // scales up our gate to handle n-qubit inputs
-        int i = 0;
+        int i = 1;
         ComplexDoubleMatrix m = this.gate;
         ComplexDoubleMatrix cm = g.gate;
         while (i < qubits) {
-            this.gate = tensorProduct(this.gate, g.gate);
+            m = tensorProduct(this.gate, g.gate);
             i++;
         }
         this.gate = this.cgate = m;
@@ -38,14 +38,27 @@ public abstract class QuantumGate {
 
 
     // IMPLEMENTATION OF THE KRONECKER TENSOR-PRODUCT FOR JBLAS
+    // note
     private ComplexDoubleMatrix tensorProduct(ComplexDoubleMatrix q1, ComplexDoubleMatrix q2) {
-        ComplexDoubleMatrix c = new ComplexDoubleMatrix(q1.length, q2.length);
-        for (int i = 0; i < q1.length; i++) {
-            for (int j = 0; j < q2.length; j++) {
-                c.put(i, j, q1.toArray()[i].mul(q2.toArray()[j]));
+        ComplexDoubleMatrix tensorData = new ComplexDoubleMatrix(q1.rows*q2.rows
+                , q2.columns*q1.columns);
+        for (int i = 0; i < q1.rows; i++) {
+            for (int k = 0; k < q2.rows; k++) {
+                for (int j = 0; j < q1.columns; j++) {
+                    for (int l = 0; l < q2.columns; l++) {
+                        tensorData.put(i + l
+                                , j + k
+                                , q1.get(i, j)
+                                        .mul(q2.get(k, l)));
+
+
+                    }
+                }
             }
+
         }
-        return c;
+
+        return tensorData ;
     }
 
 

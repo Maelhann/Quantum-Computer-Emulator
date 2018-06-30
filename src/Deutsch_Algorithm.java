@@ -40,8 +40,12 @@ public class Deutsch_Algorithm {
                 System.out.println("\n incorrect gate number specified : " + gateNum);
             } else {
                 UFGate u = new UFGate(gateNum);
-                Qubit q1_2 = q0.combine(q1);
+                System.out.println(q0.getState().columns);
+                Qubit q1_2 = q0.entangle(q1);
+                System.out.println(q1_2.getState().columns);
+                System.out.println(q1_2.getState().rows);
                 q1_2.applyGate(u);
+
                 Hadamard h2 = new Hadamard(2);
                 q1_2.applyGate(h2);
                 System.out.println("\nExecution successfully terminated\n");
