@@ -1,3 +1,4 @@
+import gates.Hadamard;
 import gates.pauli.XGate;
 import gates.pauli.YGate;
 import gates.pauli.ZGate;
@@ -6,7 +7,7 @@ import org.jblas.ComplexDoubleMatrix;
 import org.junit.Test;
 
 
-public class Pauli_Gates {
+public class Quantum_Gates {
     @Test
     public void XGate() {
 
@@ -140,6 +141,33 @@ public class Pauli_Gates {
         Qubit q1Prime = new Qubit(q1.getState().mul(-1));
         q1.applyGate(z);
         assert q1Prime.equals(q1);
+
+
+    }
+
+    @Test
+    public void Hadamard() {
+        ComplexDoubleMatrix hGateSquared
+                = new ComplexDoubleMatrix(4, 4);
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (i == 1 && (j == 1 || j == 3)
+                        || i == 2 && (j == 2 || j == 3)
+                        || i == 3 && (j == 1 || j == 2)) {
+                    hGateSquared.put(i, j, -1);
+                } else {
+                    hGateSquared.put(i, j, 1 );
+                }
+
+            }
+        }
+
+
+      /*  Hadamard h = new Hadamard(2);
+        h.getGate().print();
+        hGateSquared.print();
+        assert h.getGate() == hGateSquared;
+        */ 
 
 
     }
