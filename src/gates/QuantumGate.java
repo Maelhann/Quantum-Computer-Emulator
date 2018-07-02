@@ -33,6 +33,10 @@ public abstract class QuantumGate {
             m = tensorProduct(this.gate, g.gate);
             i++;
         }
+
+        if(g instanceof Hadamard){
+            m.mul(Math.pow(1/Math.sqrt(2),qubits - 1 )) ;
+        }
         this.gate = this.cgate = m;
     }
 

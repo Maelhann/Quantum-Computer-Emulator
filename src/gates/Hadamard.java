@@ -24,12 +24,7 @@ public class Hadamard extends QuantumGate {
         chadamard.put(2, 3, 1);
         chadamard.put(3, 2, 1);
         chadamard.put(3, 3, -1);
-        for (int i = 2; i < 4; i++) {
-            for (int j = 2; j < 4; j++) {
-                chadamard.put(i, j,
-                        chadamard.get(i, j).mul(1 / Math.sqrt(2)));
-            }
-        }
+        chadamard.mul(1/Math.sqrt(2));
 
         this.cgate = chadamard;
 
@@ -41,9 +36,10 @@ public class Hadamard extends QuantumGate {
         ComplexDoubleMatrix hadamard = new ComplexDoubleMatrix(2, 2);
         hadamard.put(0, 0, 1);
         hadamard.put(0, 1, 1);
+
         hadamard.put(1, 0, 1);
+
         hadamard.put(1, 1, -1);
-        hadamard.mul(1 / Math.sqrt(2));
         this.gate = hadamard;
 
         ComplexDoubleMatrix chadamard = new ComplexDoubleMatrix(4, 4);
@@ -53,12 +49,7 @@ public class Hadamard extends QuantumGate {
         chadamard.put(2, 3, 1);
         chadamard.put(3, 2, 1);
         chadamard.put(3, 3, -1);
-        for (int i = 2; i < 4; i++) {
-            for (int j = 2; j < 4; j++) {
-                chadamard.put(i, j,
-                        chadamard.get(i, j).mul(1 / Math.sqrt(2)));
-            }
-        }
+
 
         this.cgate = chadamard;
         scaleGate(qubits, new Hadamard());
