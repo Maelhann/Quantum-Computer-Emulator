@@ -83,6 +83,37 @@ public class Qubit {
 
     }
 
+    public Qubit entangle(Qubit q2){
+
+
+            ComplexDoubleMatrix tensorData = new ComplexDoubleMatrix(this.getState().rows
+                    * q2.getState().rows
+                    , q2.getState().columns * this.getState().columns);
+            ComplexDoubleMatrix[][] cq =
+                    new ComplexDoubleMatrix[this.getState().rows][this.getState().columns];
+
+            for (int i = 0; i < this.getState().rows; i++) {
+                for (int j = 0; j < this.getState().columns; j++) {
+                    cq[i][j] = q2.getState().mul(this.getState().get(i, j));
+                    for (int k = 0; k < q2.getState().rows; k++) {
+                        for (int p = 0; p < q2.getState().columns; p++) {
+                            tensorData.put(q2.getState().rows * i + k, j * q2.getState().columns + p
+                                    , cq[i][j].get(k, p));
+
+                        }
+                    }
+
+                }
+            }
+
+            // now cq has all the matrices needed by tensor Data
+
+
+            return  new Qubit(tensorData);
+
+
+    }
+
     /* public Qubit entangle(Qubit q2) {
         ComplexDouble[] tensorData
                 = new ComplexDouble[q2.state.toArray().length * this.state.toArray().length];
@@ -95,7 +126,7 @@ public class Qubit {
         }
         return new Qubit(tensorData);
     }
-    */
+
 
     public Qubit entangle(Qubit q2) {
         ComplexDoubleMatrix tensorData
@@ -140,6 +171,7 @@ public class Qubit {
         }
         return new Qubit(tensorData);
     }
+    */
 
     public void applyGate(QuantumGate q) {
         this.state = q.applyTo(getState());

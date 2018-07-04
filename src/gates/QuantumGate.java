@@ -43,27 +43,31 @@ public abstract class QuantumGate {
 
     // IMPLEMENTATION OF THE KRONECKER TENSOR-PRODUCT FOR JBLAS
     // note
-    private ComplexDoubleMatrix tensorProduct(ComplexDoubleMatrix q1, ComplexDoubleMatrix q2) {
-        ComplexDoubleMatrix tensorData = new ComplexDoubleMatrix(q1.rows*q2.rows
-                , q2.columns*q1.columns);
-        for (int i = 0; i < q1.rows; i++) {
-            for (int k = 0; k < q2.rows; k++) {
-                for (int j = 0; j < q1.columns; j++) {
-                    for (int l = 0; l < q2.columns; l++) {
-                        tensorData.put(i + l
-                                , j + k
-                                , q1.get(i, j)
-                                        .mul(q2.get(k, l)));
 
+    private ComplexDoubleMatrix tensorProduct(ComplexDoubleMatrix q1, ComplexDoubleMatrix q2) {
+        ComplexDoubleMatrix tensorData = new ComplexDoubleMatrix(q1.rows * q2.rows
+                , q2.columns * q1.columns);
+        ComplexDoubleMatrix[][] cq =
+                new ComplexDoubleMatrix[q1.rows][q1.columns];
+
+        for (int i = 0; i < q1.rows; i++) {
+            for (int j = 0; j < q1.columns; j++) {
+                cq[i][j] = q2.mul(q1.get(i, j));
+                for (int k = 0; k < q2.rows; k++) {
+                    for (int p = 0; p < q2.columns; p++) {
+                        tensorData.put(q2.rows * i + k, j * q2.columns + p
+                                , cq[i][j].get(k, p));
 
                     }
                 }
-            }
 
+            }
         }
 
-        return tensorData ;
-    }
+        // now cq has all the matrices needed by tensor Data
 
+
+        return tensorData;
+    }
 
 }

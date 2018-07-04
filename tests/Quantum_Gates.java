@@ -147,7 +147,7 @@ public class Quantum_Gates {
 
     @Test
     public void Hadamard() {
-       // TODO fix hadamard or kronecker product
+
         ComplexDoubleMatrix hGateSquared
                 = new ComplexDoubleMatrix(4, 4);
         for (int i = 0; i < 4; i++) {
@@ -167,7 +167,7 @@ public class Quantum_Gates {
         Hadamard h = new Hadamard(2);
         h.getGate().print();
         hGateSquared.print();
-        assert h.getGate() == hGateSquared;
+        assert h.getGate().equals(hGateSquared);
 
 
 
