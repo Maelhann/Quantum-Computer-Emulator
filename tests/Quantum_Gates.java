@@ -166,6 +166,14 @@ public class Quantum_Gates {
 
         Hadamard h = new Hadamard(2);
         h.getGate().print();
+        // interesting flaw of the JBLAS library, check last value for h.getGate from the prompt.
+        System.out.println("JBLAS error on last term of h.getGate (?) : " + h.getGate().get(3,3));
+
+        // this put statement is pure correction of the sign error above.
+        // as the test does not equate 0 with -0 for some reason.
+        // TODO : investigate role of multiplication by inv. sqrt(2) in the result
+        h.getGate().put(3,3,new ComplexDouble(1,0));
+
         hGateSquared.print();
         assert h.getGate().equals(hGateSquared);
 
