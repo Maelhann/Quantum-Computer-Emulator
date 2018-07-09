@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="906fbff8-d91c-4fc3-a734-5a96b86e9052" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Circuit_Assembler.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/test/Quantum-Emulator/Linear_Algebra.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/Quantum-Emulator/Quantum_Gates.class" afterPath="$PROJECT_DIR$/out/test/Quantum-Emulator/Quantum_Gates.class" />
-      <change beforePath="$PROJECT_DIR$/tests/Linear_Algebra.java" afterPath="$PROJECT_DIR$/tests/Qubit_Utilities.java" />
-      <change beforePath="$PROJECT_DIR$/tests/Quantum_Gates.java" afterPath="$PROJECT_DIR$/tests/Quantum_Gates.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,9 +18,10 @@
       <file leaf-file-name="QuantumGate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gates/QuantumGate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="828">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
+                <element signature="e#214#215#0" expanded="true" />
                 <element signature="e#241#242#0" expanded="true" />
                 <element signature="e#286#287#0" expanded="true" />
                 <element signature="e#314#315#0" expanded="true" />
@@ -45,8 +43,8 @@
       <file leaf-file-name="Qubit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Qubit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1824">
-              <caret line="111" column="41" lean-forward="false" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
+            <state relative-caret-position="178">
+              <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#693#694#0" expanded="true" />
@@ -65,8 +63,8 @@
       <file leaf-file-name="Quantum_Gates.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Quantum_Gates.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,14 +72,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Qubit_Utilities.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Qubit_Utilities.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Qubit_Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="156" column="16" lean-forward="false" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
+            <state relative-caret-position="1188">
+              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Circuit_Assembler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Circuit_Assembler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="34" column="16" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,9 +107,11 @@
       <file leaf-file-name="Deutsch_Algorithm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Deutsch_Algorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="48" column="44" lean-forward="false" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,17 +189,18 @@
         <option value="$PROJECT_DIR$/src/Deutsch_Algorithm.java" />
         <option value="$PROJECT_DIR$/tests/Pauli_Gates.java" />
         <option value="$PROJECT_DIR$/src/gates/Hadamard.java" />
-        <option value="$PROJECT_DIR$/src/gates/QuantumGate.java" />
         <option value="$PROJECT_DIR$/src/Qubit.java" />
-        <option value="$PROJECT_DIR$/tests/Quantum_Gates.java" />
         <option value="$PROJECT_DIR$/tests/Linear_Algebra.java" />
         <option value="$PROJECT_DIR$/tests/Qubit_Utilities.java" />
+        <option value="$PROJECT_DIR$/src/gates/QuantumGate.java" />
+        <option value="$PROJECT_DIR$/tests/Quantum_Gates.java" />
+        <option value="$PROJECT_DIR$/src/Circuit_Assembler.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="358" />
-    <option name="y" value="66" />
+    <option name="x" value="175" />
+    <option name="y" value="40" />
     <option name="width" value="1294" />
     <option name="height" value="986" />
   </component>
@@ -208,10 +219,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,6 +248,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Qubit_Utilities">
+  <component name="RunManager" selected="Application.Circuit_Assembler">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -268,9 +279,9 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="Deutsch_Algorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Circuit_Assembler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Deutsch_Algorithm" />
+      <option name="MAIN_CLASS_NAME" value="Circuit_Assembler" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -453,18 +464,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.Quantum_Gates" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.Quantum_Gates" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Deutsch_Algorithm" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.Quantum_Gates.Hadamard" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.Qubit_Utilities" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.Qubit_Utilities.entanglement" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.Quantum_Gates.Hadamard" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Qubit_Utilities" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Qubit_Utilities.entanglement" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Circuit_Assembler" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Qubit_Utilities" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Qubit_Utilities.entanglement" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Quantum_Gates" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.Quantum_Gates.Hadamard" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Deutsch_Algorithm" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Circuit_Assembler" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Quantum_Gates" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.Qubit_Utilities" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Qubit_Utilities.entanglement" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.Quantum_Gates.Hadamard" />
       </list>
     </recent_temporary>
   </component>
@@ -485,19 +496,7 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Linear_Algebra - 2018.07.04 at 11h 24m 52s.xml">
-      <configuration name="Linear_Algebra" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Linear_Algebra_entanglement - 2018.07.04 at 11h 21m 36s.xml">
-      <configuration name="Linear_Algebra.entanglement" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Linear_Algebra_entanglement - 2018.07.04 at 11h 22m 07s.xml">
-      <configuration name="Linear_Algebra.entanglement" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Linear_Algebra_entanglement - 2018.07.04 at 11h 24m 25s.xml">
-      <configuration name="Linear_Algebra.entanglement" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Quantum_Gates - 2018.07.04 at 11h 18m 34s.xml">
+    <history-entry file="Quantum_Gates - 2018.07.09 at 09h 56m 16s.xml">
       <configuration name="Quantum_Gates" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Qubit_Utilities - 2018.07.04 at 11h 30m 31s.xml">
@@ -515,9 +514,21 @@
     <history-entry file="Qubit_Utilities - 2018.07.04 at 11h 49m 41s.xml">
       <configuration name="Qubit_Utilities" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Qubit_Utilities - 2018.07.06 at 17h 27m 32s.xml">
+      <configuration name="Qubit_Utilities" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Qubit_Utilities - 2018.07.07 at 16h 55m 09s.xml">
+      <configuration name="Qubit_Utilities" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Qubit_Utilities - 2018.07.07 at 23h 18m 49s.xml">
+      <configuration name="Qubit_Utilities" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Qubit_Utilities - 2018.07.09 at 09h 56m 04s.xml">
+      <configuration name="Qubit_Utilities" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="358" y="66" width="1294" height="986" extended-state="0" />
+    <frame x="175" y="40" width="1294" height="986" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -526,9 +537,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25951558" sideWeight="0.5030912" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2814302" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25951558" sideWeight="0.4969088" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -586,21 +597,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/Quantum_Gates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gates/QuantumGate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
           <folding>
+            <element signature="e#214#215#0" expanded="true" />
             <element signature="e#241#242#0" expanded="true" />
             <element signature="e#286#287#0" expanded="true" />
             <element signature="e#314#315#0" expanded="true" />
@@ -641,6 +643,7 @@
         <state relative-caret-position="36">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
+            <element signature="e#214#215#0" expanded="true" />
             <element signature="e#241#242#0" expanded="true" />
             <element signature="e#286#287#0" expanded="true" />
             <element signature="e#314#315#0" expanded="true" />
@@ -953,11 +956,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kronTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/gates/Hadamard.java">
+    <entry file="jar://$USER_HOME$/Downloads/jblas-1.2.4.jar!/org/jblas/ComplexDoubleMatrix.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="449">
+          <caret line="691" column="0" lean-forward="false" selection-start-line="691" selection-start-column="0" selection-end-line="691" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/QuantumGate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#214#215#0" expanded="true" />
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -969,48 +984,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gates/QuantumGate.java">
+    <entry file="file://$PROJECT_DIR$/tests/Qubit_Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/jblas-1.2.4.jar!/org/jblas/ComplexDoubleMatrix.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="691" column="0" lean-forward="false" selection-start-line="691" selection-start-column="0" selection-end-line="691" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Quantum_Gates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="1188">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/Hadamard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Deutsch_Algorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="48" column="44" lean-forward="false" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Qubit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1824">
-          <caret line="111" column="41" lean-forward="false" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
+        <state relative-caret-position="178">
+          <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#693#694#0" expanded="true" />
@@ -1025,13 +1030,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Qubit_Utilities.java">
+    <entry file="file://$PROJECT_DIR$/tests/Quantum_Gates.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="156" column="16" lean-forward="false" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
+        <state relative-caret-position="306">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Circuit_Assembler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="34" column="16" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
