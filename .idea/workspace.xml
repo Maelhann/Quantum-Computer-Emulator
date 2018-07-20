@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="906fbff8-d91c-4fc3-a734-5a96b86e9052" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/Circuit_Assembler$Parser.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/Circuit_Assembler.class" afterPath="$PROJECT_DIR$/out/production/Quantum-Emulator/Circuit_Assembler.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/Hadamard.class" afterPath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/Hadamard.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/PhaseShift.class" afterPath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/PhaseShift.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/QuantumGate.class" afterPath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/QuantumGate.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/Swap.class" afterPath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/Swap.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/pauli/ID.class" afterPath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/pauli/ID.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/pauli/XGate.class" afterPath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/pauli/XGate.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/pauli/YGate.class" afterPath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/pauli/YGate.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/pauli/ZGate.class" afterPath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/pauli/ZGate.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/universal/Fredkin.class" afterPath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/universal/Fredkin.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/universal/Toffoli.class" afterPath="$PROJECT_DIR$/out/production/Quantum-Emulator/gates/universal/Toffoli.class" />
       <change beforePath="$PROJECT_DIR$/src/Circuit_Assembler.java" afterPath="$PROJECT_DIR$/src/Circuit_Assembler.java" />
+      <change beforePath="$PROJECT_DIR$/src/gates/Hadamard.java" afterPath="$PROJECT_DIR$/src/gates/Hadamard.java" />
+      <change beforePath="$PROJECT_DIR$/src/gates/PhaseShift.java" afterPath="$PROJECT_DIR$/src/gates/PhaseShift.java" />
+      <change beforePath="$PROJECT_DIR$/src/gates/QuantumGate.java" afterPath="$PROJECT_DIR$/src/gates/QuantumGate.java" />
+      <change beforePath="$PROJECT_DIR$/src/gates/Swap.java" afterPath="$PROJECT_DIR$/src/gates/Swap.java" />
+      <change beforePath="$PROJECT_DIR$/src/gates/pauli/ID.java" afterPath="$PROJECT_DIR$/src/gates/pauli/ID.java" />
+      <change beforePath="$PROJECT_DIR$/src/gates/pauli/XGate.java" afterPath="$PROJECT_DIR$/src/gates/pauli/XGate.java" />
+      <change beforePath="$PROJECT_DIR$/src/gates/pauli/YGate.java" afterPath="$PROJECT_DIR$/src/gates/pauli/YGate.java" />
+      <change beforePath="$PROJECT_DIR$/src/gates/pauli/ZGate.java" afterPath="$PROJECT_DIR$/src/gates/pauli/ZGate.java" />
+      <change beforePath="$PROJECT_DIR$/src/gates/universal/Fredkin.java" afterPath="$PROJECT_DIR$/src/gates/universal/Fredkin.java" />
+      <change beforePath="$PROJECT_DIR$/src/gates/universal/Toffoli.java" afterPath="$PROJECT_DIR$/src/gates/universal/Toffoli.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,13 +40,15 @@
       <file leaf-file-name="QuantumGate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gates/QuantumGate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
               <folding>
-                <element signature="e#214#215#0" expanded="true" />
                 <element signature="e#241#242#0" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#314#315#0" expanded="true" />
+                <element signature="e#268#269#0" expanded="true" />
+                <element signature="e#313#314#0" expanded="true" />
+                <element signature="e#341#342#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#416#417#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -32,53 +57,42 @@
       <file leaf-file-name="XGate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gates/pauli/XGate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+            <state relative-caret-position="342">
+              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Qubit.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Qubit.java">
+      <file leaf-file-name="YGate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gates/pauli/YGate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1206">
-              <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
+            <state relative-caret-position="324">
+              <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZGate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gates/pauli/ZGate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#693#694#0" expanded="true" />
-                <element signature="e#737#738#0" expanded="true" />
-                <element signature="e#772#773#0" expanded="true" />
-                <element signature="e#807#808#0" expanded="true" />
-                <element signature="e#852#853#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-                <element signature="e#5686#5687#0" expanded="true" />
-                <element signature="e#5736#5737#0" expanded="true" />
+                <element signature="e#266#267#0" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Quantum_Gates.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Quantum_Gates.java">
+      <file leaf-file-name="ID.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gates/pauli/ID.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Qubit_Utilities.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Qubit_Utilities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="324">
+              <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,13 +100,31 @@
       <file leaf-file-name="Circuit_Assembler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Circuit_Assembler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+            <state relative-caret-position="18">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2322#2323#0" expanded="true" />
-                <element signature="e#2366#2367#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Swap.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gates/Swap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Toffoli.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gates/universal/Toffoli.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,18 +132,18 @@
       <file leaf-file-name="Hadamard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gates/Hadamard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Deutsch_Algorithm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Deutsch_Algorithm.java">
+      <file leaf-file-name="PhaseShift.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gates/PhaseShift.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="306">
+              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,33 +211,33 @@
         <option value="$PROJECT_DIR$/src/QuantumGate.java" />
         <option value="$PROJECT_DIR$/src/gates/pauli/Not.java" />
         <option value="$PROJECT_DIR$/tests/Qubit_Test.java" />
-        <option value="$PROJECT_DIR$/src/gates/pauli/XGate.java" />
-        <option value="$PROJECT_DIR$/src/gates/pauli/ZGate.java" />
-        <option value="$PROJECT_DIR$/src/gates/pauli/ID.java" />
-        <option value="$PROJECT_DIR$/src/gates/PhaseShift.java" />
-        <option value="$PROJECT_DIR$/src/gates/Swap.java" />
-        <option value="$PROJECT_DIR$/src/gates/universal/Fredkin.java" />
-        <option value="$PROJECT_DIR$/src/gates/universal/Toffoli.java" />
-        <option value="$PROJECT_DIR$/src/gates/pauli/YGate.java" />
         <option value="$PROJECT_DIR$/src/algorithms/Deutsch.java" />
         <option value="$PROJECT_DIR$/src/kronTest.java" />
         <option value="$PROJECT_DIR$/src/Deutsch_Algorithm.java" />
         <option value="$PROJECT_DIR$/tests/Pauli_Gates.java" />
-        <option value="$PROJECT_DIR$/src/gates/Hadamard.java" />
         <option value="$PROJECT_DIR$/src/Qubit.java" />
         <option value="$PROJECT_DIR$/tests/Linear_Algebra.java" />
         <option value="$PROJECT_DIR$/tests/Qubit_Utilities.java" />
-        <option value="$PROJECT_DIR$/src/gates/QuantumGate.java" />
         <option value="$PROJECT_DIR$/tests/Quantum_Gates.java" />
+        <option value="$PROJECT_DIR$/src/gates/universal/Fredkin.java" />
+        <option value="$PROJECT_DIR$/src/gates/universal/Toffoli.java" />
+        <option value="$PROJECT_DIR$/src/gates/QuantumGate.java" />
+        <option value="$PROJECT_DIR$/src/gates/Hadamard.java" />
+        <option value="$PROJECT_DIR$/src/gates/Swap.java" />
+        <option value="$PROJECT_DIR$/src/gates/pauli/XGate.java" />
+        <option value="$PROJECT_DIR$/src/gates/pauli/YGate.java" />
+        <option value="$PROJECT_DIR$/src/gates/pauli/ZGate.java" />
+        <option value="$PROJECT_DIR$/src/gates/pauli/ID.java" />
+        <option value="$PROJECT_DIR$/src/gates/PhaseShift.java" />
         <option value="$PROJECT_DIR$/src/Circuit_Assembler.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="282" />
-    <option name="y" value="41" />
-    <option name="width" value="1294" />
-    <option name="height" value="986" />
+    <option name="x" value="471" />
+    <option name="y" value="56" />
+    <option name="width" value="1274" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -222,10 +254,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,12 +278,27 @@
             <path>
               <item name="Quantum-Emulator" type="b2602c69:ProjectViewProjectNode" />
               <item name="Quantum-Emulator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gates" type="462c0819:PsiDirectoryNode" />
+              <item name="pauli" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantum-Emulator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantum-Emulator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gates" type="462c0819:PsiDirectoryNode" />
+              <item name="universal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantum-Emulator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantum-Emulator" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -531,7 +577,8 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="282" y="41" width="1294" height="986" extended-state="0" />
+    <frame x="471" y="56" width="1274" height="1000" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -539,14 +586,14 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25951558" sideWeight="0.5061824" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25766176" sideWeight="0.5149137" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25951558" sideWeight="0.49381763" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25766176" sideWeight="0.48508635" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19088098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19387755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -604,10 +651,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
           <folding>
-            <element signature="e#214#215#0" expanded="true" />
             <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -616,17 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#5686#5687#0" expanded="true" />
-            <element signature="e#5736#5737#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -634,9 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -645,10 +680,12 @@
         <state relative-caret-position="36">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="e#214#215#0" expanded="true" />
             <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -657,17 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#5686#5687#0" expanded="true" />
-            <element signature="e#5736#5737#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,9 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -685,17 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1098">
           <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#5686#5687#0" expanded="true" />
-            <element signature="e#5736#5737#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -703,9 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -713,17 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#5686#5687#0" expanded="true" />
-            <element signature="e#5736#5737#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -731,9 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -741,17 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#5686#5687#0" expanded="true" />
-            <element signature="e#5736#5737#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -759,17 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#5686#5687#0" expanded="true" />
-            <element signature="e#5736#5737#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -777,17 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#5686#5687#0" expanded="true" />
-            <element signature="e#5736#5737#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -795,56 +757,7 @@
     <entry file="file://$PROJECT_DIR$/src/Gates.java" />
     <entry file="file://$PROJECT_DIR$/src/PauliGates.java" />
     <entry file="file://$PROJECT_DIR$/src/gates/pauli/not.java" />
-    <entry file="file://$PROJECT_DIR$/src/gates/pauli/ID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gates/pauli/ZGate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gates/Swap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gates/universal/Fredkin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" column="73" lean-forward="false" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gates/pauli/YGate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gates/PhaseShift.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/Deutsch.java" />
-    <entry file="file://$PROJECT_DIR$/src/gates/universal/Toffoli.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/Object.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -965,42 +878,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gates/QuantumGate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#214#215#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gates/pauli/XGate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Qubit_Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1188">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gates/Hadamard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,9 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,17 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1206">
           <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#5686#5687#0" expanded="true" />
-            <element signature="e#5736#5737#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,20 +903,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/universal/Fredkin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/QuantumGate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/pauli/XGate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/pauli/YGate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/pauli/ID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/PhaseShift.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/pauli/ZGate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/Swap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/universal/Toffoli.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gates/Hadamard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Circuit_Assembler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        <state relative-caret-position="18">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2322#2323#0" expanded="true" />
-            <element signature="e#2366#2367#0" expanded="true" />
           </folding>
         </state>
       </provider>

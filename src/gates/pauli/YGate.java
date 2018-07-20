@@ -16,6 +16,8 @@ public class YGate extends QuantumGate {
         cyGate.put(2, 3, new ComplexDouble(0,-1));
         cyGate.put(3, 2, new ComplexDouble(0,1));
         this.cgate = cyGate;
+    this.type = "Pauli Y" ;
+
     }
 
     public YGate(int qubits) {

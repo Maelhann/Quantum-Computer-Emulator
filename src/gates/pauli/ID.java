@@ -16,7 +16,8 @@ public class ID extends QuantumGate {
         cidGate.put(3, 3, 1);
         this.cgate = cidGate;
         // there really is no need for a controlled version of ID, 
-        // as cidGate basically is ID of dim 4 
+        // as cidGate basically is ID of dim 4
+        this.type = "ID";
     }
 
 

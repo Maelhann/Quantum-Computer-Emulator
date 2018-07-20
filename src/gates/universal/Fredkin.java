@@ -4,7 +4,7 @@ import gates.QuantumGate;
 import org.jblas.ComplexDoubleMatrix;
 
 public class Fredkin extends QuantumGate {
-    Fredkin() {
+    public Fredkin() {
         ComplexDoubleMatrix fredkinGate
                 = new ComplexDoubleMatrix(8, 8);
         for (int i = 0; i < 5; i++) {

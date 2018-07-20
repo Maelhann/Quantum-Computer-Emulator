@@ -5,13 +5,17 @@ import org.jblas.ComplexDoubleMatrix;
 public abstract class QuantumGate {
     protected ComplexDoubleMatrix gate;
     protected ComplexDoubleMatrix cgate;
-
+    protected String type ;
     public ComplexDoubleMatrix getGate() {
         return gate;
     }
 
     public ComplexDoubleMatrix getCgate() {
         return cgate;
+    }
+
+    public void printType(){
+        System.out.println(this.type);
     }
 
     public ComplexDoubleMatrix applyTo(ComplexDoubleMatrix c) {

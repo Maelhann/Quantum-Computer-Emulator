@@ -27,9 +27,9 @@ public class Hadamard extends QuantumGate {
         chadamard.mul(1/Math.sqrt(2));
 
         this.cgate = chadamard;
+        this.type = "Hadamard" ;
 
-
-    }
+        }
 
     // constructor for n-qubit inputs
     public Hadamard(int qubits) {

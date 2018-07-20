@@ -19,6 +19,7 @@ public class XGate extends QuantumGate {
         cxGate.put(2, 3, 1);
         cxGate.put(3, 2, 1);
         this.cgate = cxGate;
+        this.type = "Pauli X";
     }
 
 

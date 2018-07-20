@@ -8,6 +8,7 @@ public class ZGate extends PhaseShift {
 
     public ZGate() {
         super(Math.PI);
+        this.type = "Pauli Z";
     }
 
     public ZGate(int qubits) {

@@ -5,8 +5,7 @@ import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 public class Toffoli extends QuantumGate {
-    Toffoli(){
-
+    public Toffoli(){
         ComplexDoubleMatrix toffoliGate
                 = new ComplexDoubleMatrix(8, 8);
         for (int i = 0; i < 6; i++) {
