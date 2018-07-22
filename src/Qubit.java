@@ -2,20 +2,18 @@ import gates.QuantumGate;
 import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
-import java.util.InvalidPropertiesFormatException;
 import java.util.Random;
 
 public class Qubit {
     private static final double ALLOWABLE_QUBIT_ERROR = .005;
     //sometimes need more than double precision.
-    private final int RANDOM_RANGE; //
     private ComplexDoubleMatrix state;
 
     public Qubit(ComplexDoubleMatrix state) {
         //assert state.length == 2 : "superposition of two states analogous to classical bits";
         this.state = state;
         Random rand = new Random();
-        this.RANDOM_RANGE = rand.nextInt();
+
 
     }
 
@@ -23,9 +21,6 @@ public class Qubit {
         return ALLOWABLE_QUBIT_ERROR;
     }
 
-    public int getRandomRange() {
-        return RANDOM_RANGE;
-    }
 
     public ComplexDoubleMatrix getState() {
         return state;
@@ -44,34 +39,21 @@ public class Qubit {
     }
 
 
-    // needs to yield 1 with prob alpha^2 or 0 with prob beta^2 for a SINGLE QUBIT
-    // probabilistically measure for work with more than two superposed state --
-    // hence the use of random.
-
+    //For the measurement, we're going to go off directly given the probabilities of the initial state
+    // of the qubit -- that means we're not emulating the deterministic aspect of the measurement.
     public int measure(int position) {
         assert isValid() : "qubit must be in a valid state "; // add normalization function
-        Random rand = new Random();
-        double cursor;
-        do {
-            cursor = rand.nextDouble();
-        } while (cursor > RANDOM_RANGE);
 
-        for (int i = 0; i < state.toArray().length; i++) {
-            cursor -= state.toArray()[i]
-                    .mul(state.toArray()[i])
-                    .mul(RANDOM_RANGE).abs();
-            if (cursor <= 0) {
-                collapse(i);
-                return ((i >> (position - 1)) & 1);
+        double c1 = getState().get(0, 0).abs();
+        double c2 = getState().get(1, 0).abs();
+        if (c1 > c2) {
+            collapse(0);
+            return 0;
+        } else {
+            collapse(1);
+            return 1;
+        }
 
-            }
-        }
-        try {
-            throw new InvalidPropertiesFormatException("Invalid measurement @ qubit " + position);
-        } catch (InvalidPropertiesFormatException e) {
-            // catching invalid measurements
-        }
-        return -1;
     }
 
 
@@ -83,33 +65,33 @@ public class Qubit {
 
     }
 
-    public Qubit entangle(Qubit q2){
+    public Qubit entangle(Qubit q2) {
 
 
-            ComplexDoubleMatrix tensorData = new ComplexDoubleMatrix(this.getState().rows
-                    * q2.getState().rows
-                    , q2.getState().columns * this.getState().columns);
-            ComplexDoubleMatrix[][] cq =
-                    new ComplexDoubleMatrix[this.getState().rows][this.getState().columns];
+        ComplexDoubleMatrix tensorData = new ComplexDoubleMatrix(this.getState().rows
+                * q2.getState().rows
+                , q2.getState().columns * this.getState().columns);
+        ComplexDoubleMatrix[][] cq =
+                new ComplexDoubleMatrix[this.getState().rows][this.getState().columns];
 
-            for (int i = 0; i < this.getState().rows; i++) {
-                for (int j = 0; j < this.getState().columns; j++) {
-                    cq[i][j] = q2.getState().mul(this.getState().get(i, j));
-                    for (int k = 0; k < q2.getState().rows; k++) {
-                        for (int p = 0; p < q2.getState().columns; p++) {
-                            tensorData.put(q2.getState().rows * i + k, j * q2.getState().columns + p
-                                    , cq[i][j].get(k, p));
+        for (int i = 0; i < this.getState().rows; i++) {
+            for (int j = 0; j < this.getState().columns; j++) {
+                cq[i][j] = q2.getState().mul(this.getState().get(i, j));
+                for (int k = 0; k < q2.getState().rows; k++) {
+                    for (int p = 0; p < q2.getState().columns; p++) {
+                        tensorData.put(q2.getState().rows * i + k, j * q2.getState().columns + p
+                                , cq[i][j].get(k, p));
 
-                        }
                     }
-
                 }
+
             }
+        }
 
-            // now cq has all the matrices needed by tensor Data
+        // now cq has all the matrices needed by tensor Data
 
 
-            return  new Qubit(tensorData);
+        return new Qubit(tensorData);
 
 
     }

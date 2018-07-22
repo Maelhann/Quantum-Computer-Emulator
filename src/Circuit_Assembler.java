@@ -31,6 +31,10 @@ public class Circuit_Assembler {
             System.out.print("\n>");
             String input = sc.next();
             String[] words = input.split(" ");
+            for (String s:
+                 words) {
+                System.out.println(s);
+            }
 
             switch (words[0]) {
                 case "-h":
@@ -61,6 +65,7 @@ public class Circuit_Assembler {
 
                     qubits.put(words[1], new Qubit(state));
                 case "-H":
+                    System.out.println(words[1]);
                     activeGates.put(words[1],new Hadamard());
                     break;
                 case "-X":
@@ -87,7 +92,7 @@ public class Circuit_Assembler {
 
 
                 case "-q":
-                    System.out.println("\nbyebye !\n");
+                    System.out.println("\nNow exiting\n");
                     qubits = new HashMap<>();
                     activeGates = new HashMap<>();
                     break;
