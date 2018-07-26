@@ -2,6 +2,7 @@ import gates.QuantumGate;
 import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
+import java.security.InvalidAlgorithmParameterException;
 import java.util.Random;
 
 public class Qubit {
@@ -41,24 +42,34 @@ public class Qubit {
 
     //For the measurement, we're going to go off directly given the probabilities of the initial state
     // of the qubit -- that means we're not emulating the deterministic aspect of the measurement.
-    public int measure(int position) {
+    public void measure(int position) {
         assert isValid() : "qubit must be in a valid state "; // add normalization function
 
-        double c1 = getState().get(0, 0).abs();
-        double c2 = getState().get(1, 0).abs();
-        if (c1 > c2) {
-            collapse(0);
-            return 0;
-        } else {
-            collapse(1);
-            return 1;
+        Random rand = new Random();
+        double cursor = rand.nextDouble();
+        while (cursor < 0 || cursor > 1) {
+            cursor = rand.nextDouble();
         }
+        for (int i = 0; i < getState().getLength(); i++) {
+            cursor -= getState().toArray()[i].abs();
+            if (cursor <= 0) {
+                collapse(i);
+                System.out.println("bit" + i + " measured at 1");
+            }
+        }
+
+        try {
+            throw new InvalidAlgorithmParameterException("invalid measurement");
+        } catch (InvalidAlgorithmParameterException e) {
+            // caught invalid measurements
+        }
+
 
     }
 
 
     private void collapse(int entry) {
-        for (int i = 0; i < state.toArray().length; i++) {
+        for (int i = 0; i < state.getLength(); i++) {
             state.toArray()[i].set(0, 0);
         }
         state.toArray()[entry].set(1, 0);
