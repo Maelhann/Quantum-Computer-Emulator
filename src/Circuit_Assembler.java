@@ -30,7 +30,7 @@ public class Circuit_Assembler {
 
 
         while (true) {
-            System.out.println(">");
+            System.out.print(">");
             String command = sc.nextLine();
             String[] words = command.split(" ");
             switch(words[0]){
@@ -57,12 +57,68 @@ public class Circuit_Assembler {
                 case "-q" :
                     System.out.println("exiting assembler");
                 case "create" :
-                    assert words.length == 3 ;
+                    assert words.length == 4 ;
                     ComplexDoubleMatrix state = new ComplexDoubleMatrix(2,1);
-                    state.put(0,0,1);
-                    state.put(1,0,1);
+                    state.put(0,0,Integer.parseInt(words[2]));
+                    state.put(1,0,Integer.parseInt(words[3]));
                     qubits.put(words[1], new Qubit(state));
-
+                    break;
+                case "print" :
+                    System.out.println("now printing active qubits");
+                    for(String s : qubits.keySet()){
+                        System.out.println(s);
+                    }
+                    break;
+                case "apply" :
+                    assert qubits.containsKey(words[1]);
+                    QuantumGate gate ;
+                    switch (words[2]){
+                        case "-H" :
+                            gate = new Hadamard(qubits.get(words[1]).getDimension());
+                            gate.applyTo(qubits.get(words[1]).getState());
+                            break;
+                        case "-X" :
+                            gate = new XGate(qubits.get(words[1]).getDimension());
+                            gate.applyTo(qubits.get(words[1]).getState());
+                            break;
+                        case "-Y" :
+                            gate = new YGate(qubits.get(words[1]).getDimension());
+                            gate.applyTo(qubits.get(words[1]).getState());
+                            break;
+                        case "-Z" :
+                            gate = new ZGate(qubits.get(words[1]).getDimension());
+                            gate.applyTo(qubits.get(words[1]).getState());
+                            break;
+                        case "-cX" :
+                            gate = new XGate(qubits.get(words[1]).getDimension());
+                            gate.applyControlledTo(qubits.get(words[1]).getState());
+                            break;
+                        case "-cY" :
+                            gate = new YGate(qubits.get(words[1]).getDimension());
+                            gate.applyControlledTo(qubits.get(words[1]).getState());
+                            break;
+                        case "-cZ" :
+                            gate = new ZGate(qubits.get(words[1]).getDimension());
+                            gate.applyControlledTo(qubits.get(words[1]).getState());
+                            break;
+                        case "-Swap" :
+                            assert qubits.get(words[1]).getDimension() == 2 ;
+                            gate = new Swap();
+                            qubits.get(words[1]).applyGate(gate);
+                            break;
+                        case "-Fredkin" :
+                            assert qubits.get(words[1]).getDimension() == 3 ;
+                            gate = new Fredkin() ;
+                            qubits.get(words[1]).applyGate(gate);
+                        case "-Toffoli" :
+                            assert qubits.get(words[1]).getDimension() == 3 ;
+                            gate = new Toffoli();
+                            qubits.get(words[1]).applyGate(gate);
+                        default:
+                            System.out.println("error : gate not found");
+                            break;
+                    }
+                    break;
 
             }
         }

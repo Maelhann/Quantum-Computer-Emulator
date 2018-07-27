@@ -48,8 +48,9 @@ public class Deutsch_Algorithm {
 
                 Hadamard h2 = new Hadamard(2);
                 q1_2.applyGate(h2);
+                q1_2.measure();
                 System.out.println("\nExecution successfully terminated\n");
-                System.out.println("top qubit measured at :" + q1_2.measure(0));
+
 
             }
         }
