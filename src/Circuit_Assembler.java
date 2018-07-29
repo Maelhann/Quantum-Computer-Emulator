@@ -11,8 +11,6 @@ import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Circuit_Assembler {
@@ -20,14 +18,13 @@ public class Circuit_Assembler {
 
     public static void main(String[] args) {
         System.out.println("\n |--------------------------------------------------|\n" +
-                " |   WELCOME TO M.ROZE'S QUANTUM CIRCUIT ASSEMBLER   |\n" +
+                " |   WELCOME TO M.ROZE'S QUANTUM CIRCUIT ASSEMBLER  |\n" +
                 " |--------------------------------------------------|\n");
 
         System.out.println(" help : -h ");
         System.out.println(" exit : -q ");
         Scanner sc = new Scanner(System.in);
         HashMap<String, Qubit> qubits = new HashMap<>();
-
 
         while (true) {
             System.out.print(">");
@@ -38,6 +35,7 @@ public class Circuit_Assembler {
                     System.out.println("-- COMMANDS --");
                     System.out.println("create [name] [coeff1] [coeff2] - " +
                             "(creates a qubit with the given coeffs as init state)");
+                    System.out.println("measure [name]");
                     System.out.println("apply [qubitName] [gateCode] " +
                             "applies a quantum gate to the given qubit");
                     System.out.println("entangle [qubit1] [qubit2] [result_name] " +
@@ -68,6 +66,14 @@ public class Circuit_Assembler {
                     for(String s : qubits.keySet()){
                         System.out.println(s);
                     }
+                    break;
+                case "measure" :
+                      assert qubits.containsKey(words[1]): "qubit must exist.";
+                      qubits.get(words[1]).measure();
+                      break ;
+                case "entangle" :
+                    Qubit newq = qubits.get(words[1]).entangle(qubits.get(words[2]));
+                    qubits.put(words[3],newq);
                     break;
                 case "apply" :
                     assert qubits.containsKey(words[1]);

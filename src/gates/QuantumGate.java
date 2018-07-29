@@ -67,10 +67,6 @@ public abstract class QuantumGate {
 
             }
         }
-
-        // now cq has all the matrices needed by tensor Data
-
-
         return tensorData;
     }
 
