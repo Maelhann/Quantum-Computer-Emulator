@@ -26,7 +26,7 @@ public class Circuit_Assembler {
         Scanner sc = new Scanner(System.in);
         HashMap<String, Qubit> qubits = new HashMap<>();
 
-        while (true) {
+        while(true){
             System.out.print(">");
             String command = sc.nextLine();
             String[] words = command.split(" ");
@@ -126,7 +126,7 @@ public class Circuit_Assembler {
                     }
                     break;
 
-            }
+             }
         }
 
     }

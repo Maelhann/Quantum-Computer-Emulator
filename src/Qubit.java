@@ -53,13 +53,17 @@ public class Qubit {
         while (cursor < 0 || cursor > 1) {
             cursor = rand.nextDouble();
         }
+        boolean hasBeenMeasured = false ;
+
         for (int i = 0; i < getState().rows; i++) {
             for (int j = 0; j < getState().columns; j++) {
                 cursor -= getState().get(i,j).abs();
-                if (cursor <= 0) {
+                if (cursor <= 0 && !hasBeenMeasured) {
+                    hasBeenMeasured = true;
                     collapse(i,j);
                     System.out.println("bit" + "( "
                             + i + "," + j + " )" + " measured at 1");
+
                 }
             }
         }
