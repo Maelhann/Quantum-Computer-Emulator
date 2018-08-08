@@ -11,7 +11,7 @@ public class Qubit {
     private ComplexDoubleMatrix state;
 
     public Qubit(ComplexDoubleMatrix state) {
-        assert state.length == 2 : "superposition of two states analogous to classical bits";
+//        assert state.length == 2 : "superposition of two states analogous to classical bits";
         this.state = state;
         Random rand = new Random();
 

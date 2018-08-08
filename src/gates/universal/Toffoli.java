@@ -14,7 +14,6 @@ public class Toffoli extends QuantumGate {
         toffoliGate.put(6, 7, 1);
         toffoliGate.put(7, 6, 1);
         this.gate = this.cgate = toffoliGate;
-
         }
 
 

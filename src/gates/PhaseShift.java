@@ -5,7 +5,6 @@ import org.jblas.ComplexDoubleMatrix;
 
 public class PhaseShift extends QuantumGate {
     public PhaseShift(double theta) {
-
         ComplexDoubleMatrix psGate = new ComplexDoubleMatrix(2, 2);
         psGate.put(0, 0, 1);
         psGate.put(1, 1, new ComplexDouble(Math.cos(theta), Math.sin(theta)));

@@ -2,6 +2,7 @@ import gates.Hadamard;
 import gates.QuantumGate;
 import gates.pauli.ID;
 import gates.pauli.XGate;
+import org.jblas.ComplexDouble;
 import org.jblas.ComplexDoubleMatrix;
 
 import java.util.Scanner;
@@ -30,7 +31,8 @@ public class Deutsch_Algorithm {
         System.out.println("\nApplying Hadamard to both Qubits\n");
         q0.applyGate(h);
         q1.applyGate(h);
-        System.out.println("\n -- Enter gate number for U gate or -h to print the Uf mappings -- \n");
+        System.out.println("\n -- Enter gate number for U gate analogous to the function \n" +
+                "you wish to test or -h to print the 4 available mappings -- \n");
         String input = uGateScanner.next();
         if (input.equals("-h")) {
             System.out.println("DISPLAY HELP");
@@ -48,7 +50,12 @@ public class Deutsch_Algorithm {
 
                 Hadamard h2 = new Hadamard(2);
                 q1_2.applyGate(h2);
+
                 q1_2.measure();
+                if(q1_2.getState().get(0,0) == new ComplexDouble(1,0)){
+                    System.out.println(" congrats -- You've selected an injective mapping.");
+                }
+
                 System.out.println("\nExecution successfully terminated\n");
 
 
