@@ -42,18 +42,15 @@ public class Deutsch_Algorithm {
                 System.out.println("\n incorrect gate number specified : " + gateNum);
             } else {
                 UFGate u = new UFGate(gateNum);
-                System.out.println(q0.getState().columns);
                 Qubit q1_2 = q0.entangle(q1);
-                System.out.println(q1_2.getState().columns);
-                System.out.println(q1_2.getState().rows);
                 q1_2.applyGate(u);
-
                 Hadamard h2 = new Hadamard(2);
                 q1_2.applyGate(h2);
 
-                q1_2.measure();
-                if(q1_2.getState().get(0,0) == new ComplexDouble(1,0)){
+                if(q1_2.measure()){
                     System.out.println(" congrats -- You've selected an injective mapping.");
+                }else{
+                    System.out.println(" snap -- this mapping is not injective");
                 }
 
                 System.out.println("\nExecution successfully terminated\n");

@@ -45,7 +45,7 @@ public class Qubit {
 
 
     //For the measurement, we're going to go off directly given the probabilities of the initial state
-    public void measure() {
+    public boolean measure() {
         assert isValid() : "qubit must be in a valid state "; // add normalization function
 
         Random rand = new Random();
@@ -54,7 +54,8 @@ public class Qubit {
             cursor = rand.nextDouble();
         }
         boolean hasBeenMeasured = false ;
-
+        int row = 0;
+        int col = 0;
         for (int i = 0; i < getState().rows; i++) {
             for (int j = 0; j < getState().columns; j++) {
                 cursor -= getState().get(i,j).abs();
@@ -63,7 +64,8 @@ public class Qubit {
                     collapse(i,j);
                     System.out.println("bit" + "( "
                             + i + "," + j + " )" + " measured at 1");
-
+                    row = i ;
+                    col =  j ;
                 }
             }
         }
@@ -73,7 +75,7 @@ public class Qubit {
         } catch (InvalidAlgorithmParameterException e) {
             // caught invalid measurements
         }
-
+    return row == 1 && col == 0;
 
     }
 
